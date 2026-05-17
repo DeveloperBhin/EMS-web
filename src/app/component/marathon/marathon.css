@@ -1,0 +1,162 @@
+.page{
+  max-width:1000px;
+  margin:auto;
+  font-family: Arial;
+}
+
+
+/* header */
+
+.header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:10px;
+}
+
+.title{
+  text-align:center;
+  font-size:12px;
+}
+
+.coat{
+  height:60px;
+}
+
+.tari{
+  height:60px;
+}
+
+
+/* hero */
+
+.hero{
+  position:relative;
+}
+
+.hero-img{
+  width:100%;
+  height:300px;
+  object-fit:cover;
+}
+
+.hero-text{
+  position:absolute;
+  top:30px;
+  left:0;
+  right:0;
+  text-align:center;
+  color:#1b7a3f;
+}
+
+
+/* countdown */
+
+.countdown{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  margin:20px 0;
+}
+
+.box{
+  background:white;
+  border:2px solid #1b7a3f;
+  padding:10px;
+  width:70px;
+  border-radius:6px;
+}
+
+.box h2{
+  margin:0;
+}
+
+
+/* register */
+
+.register-btn{
+  background:#1b7a3f;
+  color:white;
+  border:none;
+  padding:12px 40px;
+  font-size:18px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+
+/* about */
+
+.about{
+  padding:30px;
+}
+
+.about-content{
+  display:flex;
+  gap:20px;
+}
+
+.about img{
+  width:250px;
+  border-radius:6px;
+}
+
+
+/* payments */
+
+.payments{
+  padding:30px;
+  text-align:center;
+}
+
+.payment-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.payment{
+  border:2px solid #1b7a3f;
+  padding:20px;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+.payment img{
+  height:60px;
+}
+
+.payment.active{
+  background:#1b7a3f;
+  color:white;
+}
+
+
+/* participants */
+
+.participants{
+  background:#b7a200;
+  padding:30px;
+  color:white;
+}
+
+.participants ol{
+  columns:2;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 15s linear infinite;
+}
+
+/* * {
+  outline: 1px solid red;
+} */

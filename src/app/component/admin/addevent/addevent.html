@@ -1,0 +1,186 @@
+  <div class="flex">
+
+  <!-- Sidebar -->
+  <app-sidebar></app-sidebar>
+
+  <!-- Main content -->
+  <div class="flex-1">
+<section class="bg-gray-50 py-14 px-4 md:px-16">
+
+  <div class="max-w-6xl mx-auto">
+  <div 
+     class="cursor-pointer p-6 bg-white drop-shadow-md drop-shadow-[#11732e] 
+            flex flex-col gap-4 
+             rounded-lg">
+  <div class=" rounded-lg p-4 shadow-sm">
+
+    <p class="font-bold mb-4 text-center md:text-xl text-2xl sm:text-sm ">Add an Event </p>
+<label class="block mb-2 font-semibold">Event Title</label>
+    <input type="text"
+       [(ngModel)]="formData.title"
+       name="title"
+       class="w-full px-3 py-2 rounded mt-1 shadow-sm focus:ring-2 focus:ring-yellow-400 focus:outline-none shadow-md p-4"
+       placeholder="Add title">
+
+
+       <label class="block  font-semibold">Event Description</label>
+    <input type="text"
+       [(ngModel)]="formData.description"
+       name="description"
+       class="w-full px-3 py-2 rounded mt-1 shadow-sm focus:ring-2 focus:ring-yellow-400 focus:outline-none shadow-md"
+       placeholder="Add description">
+
+       <label class="block  font-semibold">Event Category</label>
+<select [(ngModel)]="formData.category"
+        name="category"
+               class="w-full px-3 py-2 rounded mt-1 shadow-sm focus:ring-2 focus:ring-yellow-400 focus:outline-none shadow-md"
+>
+  <option value="">Event category</option>
+  <option>Sports</option>
+  <option>Social</option>
+  <option>Conference</option>
+</select>
+
+  <label class="block  font-semibold">Event Featured Image</label>
+    <input type="file"
+       [(ngModel)]="formData.featuredImage"
+       name="featuredImage"
+       class="w-full px-3 py-2 rounded mt-1 shadow-sm focus:ring-2 focus:ring-yellow-400 focus:outline-none shadow-md"
+       placeholder="Add featured image">
+
+       <label class="block  font-semibold">Event Link</label>
+    <input type="text"
+       [(ngModel)]="formData.eventLink"
+       name="eventLink"
+      
+       class="w-full px-3 py-2 rounded mt-1 shadow-sm focus:ring-2 focus:ring-yellow-400 focus:outline-none shadow-md"
+       placeholder="Add even link">
+  </div>
+    </div>
+  </div>
+</section>
+<section class="bg-gray-50 py-3 px-4 md:px-16">
+
+  <div class="max-w-6xl mx-auto">
+  <div 
+     class="cursor-pointer p-6 bg-white drop-shadow-md drop-shadow-[#11732e] 
+            flex flex-col gap-4 
+             rounded-lg">
+  <div class=" rounded-lg p-4 shadow-sm">
+
+    <p class="font-bold mb-4 text-center md:text-xl text-2xl sm:text-sm ">DATE & LOCATION </p>
+
+     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+     <div class="">
+
+ <label class="block mb-2 font-semibold">start date</label>
+<input type="datetime-local"
+  [(ngModel)]="formData.startdate"
+  name="startdate"
+       class="w-full px-3 py-2 rounded mt-1 shadow-sm focus:ring-2 focus:ring-yellow-400 focus:outline-none shadow-md p-4"
+  placeholder="Enter start date">
+     </div>
+     <div>
+   <label class="block mb-2 font-semibold">end date</label>
+
+<input type="datetime-local"
+  [(ngModel)]="formData.enddate"
+  name="enddate"
+       class="w-full px-3 py-2 rounded mt-1 shadow-sm focus:ring-2 focus:ring-yellow-400 focus:outline-none shadow-md p-4"
+  placeholder="Enter end date">
+     </div>
+
+
+  </div>
+<label class="block mb-2 font-semibold">Event Timezone</label>
+    <input type="text"
+       [(ngModel)]="formData.timezone"
+       name="timezone"
+       class="w-full px-3 py-2 rounded mt-1 shadow-sm focus:ring-2 focus:ring-yellow-400 focus:outline-none shadow-md p-4"
+       placeholder="Add timezone">
+
+
+       <label class="block  font-semibold">Event Location</label>
+    <input type="text"
+       [(ngModel)]="formData.location"
+       name="location"
+       class="w-full px-3 py-2 rounded mt-1 shadow-sm focus:ring-2 focus:ring-yellow-400 focus:outline-none shadow-md"
+       placeholder="Add location">
+
+      
+
+  
+      
+  </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-gray-50 py-3 px-4 md:px-16">
+
+  <div class="max-w-6xl mx-auto">
+  <div 
+     class="cursor-pointer p-6 bg-white drop-shadow-md drop-shadow-[#11732e] 
+            flex flex-col gap-4 
+             rounded-lg">
+  <div class=" rounded-lg p-4 shadow-sm">
+
+    <p class="font-bold mb-4 text-center md:text-xl text-2xl sm:text-sm ">REGISTRATION & PRICING </p>
+
+
+
+
+
+ 
+
+
+     <div class="flex items-center justify-between">
+  
+  <label class="font-semibold">Registration required</label>
+
+  <label class="relative inline-flex items-center cursor-pointer">
+    
+    <!-- Hidden checkbox -->
+    <input
+      type="checkbox"
+      [(ngModel)]="formData.agreed"
+      name="agreed"
+      class="sr-only peer"
+    >
+
+    <!-- Track -->
+    <div class="w-11 h-6 bg-gray-300 rounded-full 
+                peer-checked:bg-blue-500 
+                transition-colors duration-300">
+    </div>
+
+    <!-- Circle -->
+    <div class="absolute left-0.5 top-0.5 w-5 h-5 bg-white rounded-full
+                transform transition-transform duration-300
+                peer-checked:translate-x-5">
+    </div>
+
+  </label>
+
+</div>
+
+        <label class="block  font-semibold py-8">Event Type</label>
+<select [(ngModel)]="formData.type"
+        name="type"
+               class="w-full px-3 py-2 rounded mt-1 shadow-sm focus:ring-2 focus:ring-yellow-400 focus:outline-none shadow-md"
+>
+  <option value="">Event type</option>
+  <option>Paid</option>
+  <option>Free</option>
+</select>
+
+      
+
+  
+      
+  </div>
+    </div>
+  </div>
+</section>
+  </div>
+  </div>

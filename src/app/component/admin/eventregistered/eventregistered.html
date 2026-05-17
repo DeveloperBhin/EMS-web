@@ -1,0 +1,123 @@
+
+
+  <div class="flex">
+
+  <!-- Sidebar -->
+  <app-sidebar></app-sidebar>
+
+  <!-- Main content -->
+  <div class="flex-1">
+    <section class="py-10 ">
+  <!-- PAYMENTS -->
+  <div class="max-w-5xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-1 gap-6 ">
+      <div class="  cursor-pointer p-10 bg-white    drop-shadow-md drop-shadow-[#11732e] flex flex-col items-center hover:shadow-lg transition overflow-hidden"
+          >
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 ">
+        <div  class="p-4   rounded-lg drop-shadow-black  drop-shadow-md bg-[#11732e] text-white hover:drop-shadow-2xl  hover:scale-100 "> 
+
+    <!-- <img 
+        [src]="event.featuredImage" 
+        alt="event image"
+        class="w-full h-80 object-cover rounded mb-3"
+      /> -->
+
+          <img src="/kilimanjaro-marathon-750x450.jpg" class="w-full  object-cover">
+
+   <p class="mt-2 p-4"><strong>Total Registered:</strong> </p>
+     
+
+      
+
+     
+
+      
+       <a 
+            href="/admin/eventregistered-details" 
+            class="mt-4 text-white bg-yellow-500 px-4 py-2 rounded hover:bg-yellow-700 w-fit ">
+            View Event
+          </a>
+
+    </div>
+
+
+  </div>
+  </div>
+            <div >
+</div>
+      </div>
+
+  </div>
+</section>
+<section class="py-10 ">
+  <!-- PAYMENTS -->
+  <div class="max-w-5xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-1 gap-6 ">
+      <div class="  cursor-pointer p-10 bg-white    drop-shadow-md drop-shadow-[#11732e] flex flex-col items-center hover:shadow-lg transition overflow-hidden"
+          >
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 ">
+    
+    <div *ngFor="let event of events$ | async" class="p-4   rounded-lg drop-shadow-black  drop-shadow-md bg-[#11732e] text-white scale-105 rotate-1 hover:drop-shadow-2xl  hover:scale-100 "> 
+    <!-- <img 
+        [src]="event.featuredImage" 
+        alt="event image"
+        class="w-full h-80 object-cover rounded mb-3"
+      /> -->
+
+          <img src="/kilimanjaro-marathon-750x450.jpg" class="w-full h-full object-cover">
+
+  
+     <span 
+    class="absolute top-5 right-3 bg-yellow-500 
+           px-3 py-1  italic text-xl sm:text-sm  font-bold  shadow-md">
+    UPCOMING
+  </span>
+
+      <h3 class="text-xl font-semibold">{{ event.title }}</h3>
+      <p class="text-yellow-300">{{ event.description }}</p>
+
+      <p class="mt-2"><strong>Category:</strong> {{ event.category }}</p>
+      <p><strong>Type:</strong> {{ event.eventType }}</p>
+
+      <p class="mt-2">
+        <strong>Date:</strong> {{ event.startDate }} → {{ event.endDate }}
+      </p>
+
+      <p *ngIf="event.location">
+        <strong>Location:</strong> {{ event.location }}
+      </p>
+
+      <p *ngIf="event.eventTime" class="p-2">
+        <strong>Time:</strong> {{ event.eventTime }}
+      </p>
+
+      
+       <a 
+       *ngIf="event.eventLink"
+            [href]="event.eventLink" 
+            class="mt-4 text-white bg-yellow-500 px-4 py-2 rounded hover:bg-yellow-700 w-fit ">
+            View Event
+          </a>
+
+    </div>
+
+
+
+  </div>
+            <div >
+</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+  </div>
+  </div>
+  
+   
+
+
+
+  

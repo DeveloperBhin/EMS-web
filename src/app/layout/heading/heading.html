@@ -1,0 +1,79 @@
+<!-- STICKY HEADER -->
+<header class="sticky top-0 z-50 shadow-md">
+
+  <!-- TOP HEADER -->
+  <div class="flex items-center justify-between bg-white px-4 py-2">
+
+    <!-- Left Logo -->
+    <img src="/emblem.png"
+         class="w-12 sm:w-16 md:w-20"
+         alt="Tanzania Emblem">
+
+    <!-- Title -->
+    <div class="text-center flex-1 px-2 leading-tight">
+
+      <p class="font-bold text-[#11732E] text-xs sm:text-sm md:text-lg">
+        Jamhuri ya Muungano wa Tanzania
+      </p>
+
+      <p class="font-bold text-[#11732E] text-xs sm:text-sm md:text-base">
+        Wizara ya Kilimo
+      </p>
+
+      <p class="font-bold text-[#11732E] text-sm sm:text-xl md:text-2xl lg:text-3xl">
+        TAASISI YA UTAFITI WA KILIMO TANZANIA
+      </p>
+
+    </div>
+
+    <!-- Right Logo -->
+    <img src="/tarilogo.png"
+         class="w-14 sm:w-18 md:w-24"
+         alt="TARI Logo">
+
+  </div>
+
+
+  <!-- GOLD GOVERNMENT LINE -->
+  <div class="h-1 bg-yellow-400"></div>
+
+
+  <!-- NAVBAR -->
+  <div class="bg-[#11732E]">
+
+    <div class="max-w-7xl mx-auto flex items-center justify-between px- py-2">
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex gap-8 text-white font-medium text-lg ">
+ <a href="/" class="hover:text-yellow-300 transition"></a>
+        <a href="/marathon" class="hover:text-yellow-300 transition">Marathon</a>
+        <a href="/" class="hover:text-yellow-300 transition">Conference</a>
+       
+      </nav>
+
+
+      <!-- Mobile Menu Button -->
+      <button
+        class="md:hidden text-white text-3xl"
+        (click)="menuOpen = !menuOpen">
+
+        ☰
+
+      </button>
+
+    </div>
+
+
+    <!-- MOBILE MENU -->
+    <div
+      *ngIf="menuOpen"
+      class="md:hidden flex flex-col items-center gap-4 pb-5 text-white font-medium text-lg">
+ <a href="/" class="hover:text-yellow-300">Home</a>
+      <a href="/marathon" class="hover:text-yellow-300">Marathon</a>
+      <a href="/" class="hover:text-yellow-300">Conference</a>
+     
+    </div>
+
+  </div>
+
+</header>

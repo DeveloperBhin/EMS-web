@@ -1,0 +1,192 @@
+<section>
+  <div class="max-w-5xl mx-auto py-6 sm:py-10 px-4 sm:px-6 lg:px-8">
+
+    <p class="text-xl sm:text-2xl font-bold p-2">
+      HABARI - MATUKIO
+    </p>
+
+    <div class="bg-[#11732e] shadow-md rounded p-3 sm:p-4">
+
+    <div class="flex items-center px-4 py-3">
+
+  <!-- Logo -->
+  <p class="text-xl font-bold p-1 bg-white text-black rounded">
+    TARI-EMS
+  </p>
+
+  <!-- Nav -->
+<nav class="grid grid-cols-3 items-center text-white font-medium text-sm sm:text-lg flex-1">
+    <!-- Left -->
+    <a href="/" class="justify-self-start hover:text-yellow-300 transition p-3">
+      HOME
+    </a>
+
+    <!-- Center -->
+    <a href="/selcom" class="justify-self-center hover:text-yellow-300 transition">
+      EVENTS
+    </a>
+
+    <!-- Right -->
+    <a href="/vodacom" class="justify-self-end hover:text-yellow-300 transition">
+      GALLERY
+    </a>
+
+  </nav>
+
+</div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="py-10 p-10 ">
+   <!-- 🟢 STEP HEADER -->
+<div class="flex items-center justify-between mb-8 text-sm">
+
+  <div class="flex-1 text-center">
+    <div class="w-6 h-6 mx-auto rounded-full bg-gray-300 flex items-center justify-center">1</div>
+    <p class="mt-1">Event details</p>
+  </div>
+
+  <div class="flex-1 h-[2px] bg-green-700"></div>
+
+  <div class="flex-1 text-center">
+    <div class="w-6 h-6 mx-auto rounded-full bg-green-700 text-white flex items-center justify-center">2</div>
+    <p class="mt-1 font-semibold">Event Registration</p>
+  </div>
+
+  <div class="flex-1 h-[2px] bg-gray-300"></div>
+
+  <div class="flex-1 text-center">
+    <div class="w-6 h-6 mx-auto rounded-full bg-gray-300 flex items-center justify-center">3</div>
+    <p class="mt-1">Payments</p>
+  </div>
+
+</div>
+
+<!-- 🧾 FORM -->
+ 
+<form (ngSubmit)="submitForm()" class="bg-white p-6 rounded-lg shadow-md space-y-6">
+     <div 
+     class="cursor-pointer p-6 bg-white drop-shadow-md drop-shadow-[#11732e] 
+            flex flex-col gap-4 
+             rounded-lg">
+  <!-- 🔹 BASIC INFO -->
+       <p class="font-semibold mb-4">Participant details</p>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+   <input type="text"
+       [(ngModel)]="formData.name"
+       name="name"
+       class="w-full border border-yellow-600 px-3 py-2 rounded mt-1"
+       placeholder="Enter full name">
+
+<input type="text"
+  [(ngModel)]="formData.phone"
+  name="phone"
+  pattern="[0-9+\-\s]{9,15}"
+  class="w-full border  border-yellow-600 px-3 py-2 rounded mt-1"
+  placeholder="Enter phone">
+
+<input type="email"
+  [(ngModel)]="formData.email"
+  name="email"
+  class="w-full border border-yellow-600 px-3 py-2 rounded mt-1"
+  placeholder="Enter email">
+
+<input type="number"
+       [(ngModel)]="formData.age"
+       name="age"
+       class="w-full border border-yellow-600 px-3 py-2 rounded mt-1"
+       placeholder="Enter age">
+
+  </div>
+     </div>
+<!-- 🔹 EVENT SPECIFICATION -->
+    <div 
+     class="cursor-pointer p-6 bg-white drop-shadow-md drop-shadow-[#11732e] 
+            flex flex-col gap-4 
+             rounded-lg">
+  <div class=" rounded-lg p-4 shadow-sm">
+
+    <p class="font-semibold mb-4">Event Specification</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+     <select [(ngModel)]="formData.tshirtSize"
+        name="tshirtSize"
+        class="w-full border border-yellow-600 px-3 py-2 rounded mt-1">
+  <option value="">Select size</option>
+  <option>S</option>
+  <option>M</option>
+  <option>L</option>
+  <option>XL</option>
+</select>
+
+<input type="text"
+       [(ngModel)]="formData.pickupLocation"
+       name="pickupLocation"
+       class="w-full border border-yellow-600 px-3 py-2 rounded mt-1"
+       placeholder="Enter location">
+
+<select [(ngModel)]="formData.raceType"
+        name="raceType"
+        class="w-full border border-yellow-600 px-3 py-2 rounded mt-1">
+  <option value="">Race type</option>
+  <option>5km</option>
+  <option>10km</option>
+  <option>21km</option>
+  <option>42km</option>
+</select>
+    </div>
+
+  </div>
+    </div>
+
+  <!-- 🔹 TERMS -->
+  <div class="flex items-center gap-2">
+    <input type="checkbox"
+       [(ngModel)]="formData.agreed"
+       name="agreed">
+    <label for="terms" class="text-sm">
+      I agree to the terms and conditions *
+    </label>
+  </div>
+
+  <div class="bg-blue-100 text-sm p-3 rounded text-gray-800">
+    <strong>Note:</strong> You don't need to create an account. Just provide your details and complete the registration. Admins will see your registration in their dashboard.
+  </div>
+
+  <div class="flex justify-between mt-6">
+
+    
+    <div class="flex justify-end mt-6">
+  <button
+    
+  
+    (click)="goToDetails(events$); $event.stopPropagation()"
+    class="mt-4 bg-gray-400 text-white px-4 py-2 rounded hover:bg-gray-600 transition">
+    
+   Back
+  </button>
+</div>
+
+    
+  </div>
+  <div class="flex justify-end mt-6 p-4">
+ <button
+ type="submit"
+ class="mt-4 bg-green-500 text-black px-4 py-2 rounded hover:bg-green-400 transition">
+  Continue
+</button>
+</div>
+
+</form>
+ 
+</section>
+
+
+
+

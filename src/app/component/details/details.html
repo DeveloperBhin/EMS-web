@@ -1,0 +1,120 @@
+<section>
+  <div class="max-w-5xl mx-auto py-6 sm:py-10 px-4 sm:px-6 lg:px-8">
+
+    <p class="text-xl sm:text-2xl font-bold p-2">
+      HABARI - MATUKIO
+    </p>
+
+    <div class="bg-[#11732e] shadow-md rounded p-3 sm:p-4">
+
+    <div class="flex items-center px-4 py-3">
+  <!-- Logo -->
+  <p class="text-xl font-bold p-1 bg-white text-black rounded text-base text-xs sm:text-sm md:text-xl lg:text-2xl">
+    TARI-EMS
+  </p>
+  <!-- Nav -->
+<nav class="grid grid-cols-3 items-center text-white text-base text-xs  sm:text-sm md:text-xl lg:text-2xl font-semibold flex-1">
+  <!-- <nav class="grid grid-cols-3 items-center text-white font-semibold text-xs sm:text-sm md:text-lg lg:text-xl"> -->
+  
+  <!-- Left -->
+    <a href="/" class="justify-self-end hover:text-yellow-300 transition ">
+      HOME
+    </a>
+
+    <!-- Center -->
+    <a href="/events" class="justify-self-end hover:text-yellow-300 transition ">
+      EVENTS
+    </a>
+    <!-- Right -->
+   <a href="/gallery"
+   class="justify-self-end hover:text-yellow-300 transition ">
+  GALLERY
+</a>
+  </nav>
+</div>
+ </div>
+
+  </div>
+</section>
+
+<section class="py-10 p-10 ">
+   <div 
+     class="cursor-pointer p-6 bg-white drop-shadow-md drop-shadow-[#11732e] 
+            flex flex-col gap-4 
+             rounded-lg">
+<div class="flex items-center justify-between mb-6 text-sm ">
+ <div class="flex-1 text-center">
+    <div class="w-6 h-6 mx-auto rounded-full bg-green-700 text-white flex items-center justify-center">1</div>
+    <p class="mt-1">Event details</p>
+  </div>
+
+  <div class="flex-1 h-[2px] bg-green-700"></div>
+
+  <div class="flex-1 text-center">
+    <div class="w-6 h-6 mx-auto rounded-full bg-gray-300 text-black flex items-center justify-center">2</div>
+    <p class="mt-1">Event Registration</p>
+  </div>
+
+  <div class="flex-1 h-[2px] bg-gray-300"></div>
+
+  <div class="flex-1 text-center">
+    <div class="w-6 h-6 mx-auto rounded-full bg-gray-300 text-black flex items-center justify-center">3</div>
+    <p class="mt-1">Payments</p>
+  </div>
+
+</div>
+
+<!-- 🟡 EVENT DETAILS CARD -->
+<div *ngIf="events$ | async as event" class="border border-yellow-600 rounded-lg overflow-hidden shadow-md">
+
+  <!-- HEADER -->
+  <div class="bg-yellow-600 h-16"></div>
+
+  <!-- CONTENT -->
+  <div class="p-6 bg-white text-green-800">
+
+    <h2 class="font-bold mb-4 uppercase">
+      {{ event?.title }}
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+
+      <p>
+        <strong>Date:</strong><br>
+        {{ event?.startDate }} 
+      </p>
+
+      <p>
+        <strong>Location:</strong><br>
+        {{ event?.location  }}
+      </p>
+
+      <p>
+        <strong>Pricing:</strong><br>
+        TZS {{ event?.price}}
+      </p>
+
+    </div>
+
+  </div>
+
+   <div class="flex justify-end mt-6 p-4">
+    <button
+      (click)="goToRegister(event); $event.stopPropagation()"
+      class="mt-4 bg-green-500 text-black px-4 py-2 rounded hover:bg-green-400 transition">
+      Continue
+    </button>
+  </div>
+
+ 
+
+</div>
+
+<!-- 🔘 CONTINUE BUTTON -->
+
+    </div>
+</section>
+
+
+
+

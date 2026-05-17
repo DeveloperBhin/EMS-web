@@ -1,0 +1,190 @@
+<!-- STICKY HEADER -->
+<header class="sticky top-0 z-50 shadow-md">
+
+  <!-- TOP HEADER -->
+  <div class="flex items-center justify-between bg-white px-4 py-2">
+
+    <!-- Left Logo -->
+    <img src="/emblem.png"
+         class="w-12 sm:w-16 md:w-20"
+         alt="Tanzania Emblem">
+
+    
+    <!-- Right Logo -->
+    <img src="/tarilogo.png"
+         class="w-14 sm:w-18 md:w-24"
+         alt="TARI Logo">
+
+  
+<!-- NAVBAR -->
+
+    <div class="max-w-7xl mx-auto flex items-center justify-between px- py-3">
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex gap-8 text-green-700 font-medium text-lg p-3">
+
+<a 
+  routerLink="/marathon"
+  class="whitespace-nowrap text-sm sm:text-base md:text-sm px-2 py-1 hover:text-yellow-300"
+>
+  {{ 'NAV.MARATHON' | translate }}
+</a>
+ 
+<a 
+  routerLink="/marathon/instructions"
+  class="whitespace-nowrap text-sm sm:text-base md:text-sm px-2 py-1 hover:text-yellow-300"
+>
+  {{ 'NAV.INSTRUCTIONS' | translate }}
+</a>
+
+<a 
+  routerLink="/marathon/winners-details"
+  class="whitespace-nowrap text-sm sm:text-base md:text-sm px-2 py-1 hover:text-yellow-300"
+>
+  {{ 'NAV.WINNERS' | translate }}
+</a>
+
+
+<a 
+  routerLink="/marathon/about-marathon"
+  class="whitespace-nowrap text-sm sm:text-base md:text-sm px-2 py-1 hover:text-yellow-300"
+>
+  {{ 'NAV.ABOUT' | translate }}
+</a>
+<!-- <a 
+  href="/" 
+  class="whitespace-nowrap 
+         text-sm sm:text-base md:text-sm
+         px-2 py-1 
+         hover:text-yellow-300"
+>
+Ramani</a> -->
+
+<a 
+  href="https://sgrticket.trc.co.tz/home/index"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="whitespace-nowrap text-sm sm:text-base md:text-sm px-2 py-1 hover:text-yellow-300"
+>
+  {{ 'NAV.SGR' | translate }}
+</a>
+<a 
+  href="https://maria2438.pixieset.com/uzinduzimarathon/"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="whitespace-nowrap text-sm sm:text-base md:text-sm px-2 py-1 hover:text-yellow-300"
+>
+  {{ 'NAV.GALLERY' | translate }}
+</a>
+
+     <a href="/" ...>
+  <!-- <div class="flex items-center gap-2">
+    <button (click)="changeLang('en')">English</button>
+    <button (click)="changeLang('sw')">Lugha</button>
+  </div> -->
+<select #langSelect
+        [value]="currentLang"
+        (change)="changeLang(langSelect.value)"
+        class="border rounded px-2 py-1 text-sm">
+
+  <option value="sw">🇹🇿 Kiswahili</option>
+  <option value="en">🇬🇧 English</option>
+
+</select>
+
+</a>
+      </nav>
+
+
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden flex justify-end w-full">
+  <button
+    class="text-green-700 text-2xl"
+    (click)="menuOpen = !menuOpen ">
+    ☰
+  </button>
+</div>
+
+    </div>
+
+
+    <!-- MOBILE MENU -->
+    <div
+      *ngIf="menuOpen"
+      class="md:hidden flex flex-col items-center gap-4 pb-5 text-green-700 font-medium text-lg">
+ <a href="/" class="hover:text-yellow-300 whitespace-nowrap 
+         text-sm sm:text-base md:text-sm
+         px-2 py-1 ">Home</a>
+      <a 
+  routerLink="/marathon"
+  class="whitespace-nowrap text-sm sm:text-base md:text-sm px-2 py-1 hover:text-yellow-300"
+>
+  {{ 'NAV.MARATHON' | translate }}
+</a>
+
+<a 
+  routerLink="/marathon/instructions"
+  class="whitespace-nowrap text-sm sm:text-base md:text-sm px-2 py-1 hover:text-yellow-300"
+>
+  {{ 'NAV.INSTRUCTIONS' | translate }}
+</a>
+     <a 
+  routerLink="/marathon/winners-details"
+  class="whitespace-nowrap text-sm sm:text-base md:text-sm px-2 py-1 hover:text-yellow-300"
+>
+  {{ 'NAV.WINNERS' | translate }}
+</a>
+<a 
+  routerLink="/marathon/about-marathon"
+  class="whitespace-nowrap text-sm sm:text-base md:text-sm px-2 py-1 hover:text-yellow-300"
+>
+  {{ 'NAV.ABOUT' | translate }}
+</a>
+     <!-- <a href="/marathon" class="hover:text-yellow-300 whitespace-nowrap 
+         text-sm sm:text-base md:text-sm
+         px-2 py-1 ">Ramani</a> -->
+    <a 
+  href="https://sgrticket.trc.co.tz/home/index"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="whitespace-nowrap text-sm sm:text-base md:text-sm px-2 py-1 hover:text-yellow-300"
+>
+  {{ 'NAV.SGR' | translate }}
+</a>
+    <a 
+  href="https://maria2438.pixieset.com/uzinduzimarathon/"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="whitespace-nowrap text-sm sm:text-base md:text-sm px-2 py-1 hover:text-yellow-300"
+>
+  {{ 'NAV.GALLERY' | translate }}
+</a>
+      
+     <a >
+  <!-- <div class="flex items-center gap-2">
+    <button (click)="changeLang('en')">English</button>
+    <button (click)="changeLang('sw')">Lugha</button>
+  </div> -->
+<select #langSelect
+        [value]="currentLang"
+        (change)="changeLang(langSelect.value)"
+        class="border rounded px-2 py-1 text-sm">
+
+  <option value="sw">🇹🇿 Kiswahili</option>
+  <option value="en">🇬🇧 English</option>
+
+</select>
+
+</a>
+     
+    </div>
+
+  </div>
+
+
+  <!-- GOLD GOVERNMENT LINE -->
+  <div class="h-1 bg-green-500"></div>
+
+
+  
+</header>

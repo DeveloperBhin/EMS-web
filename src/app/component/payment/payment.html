@@ -1,0 +1,110 @@
+<section>
+  <div class="max-w-5xl mx-auto py-6 sm:py-10 px-4 sm:px-6 lg:px-8">
+
+    <p class="text-xl sm:text-2xl font-bold p-2">
+      HABARI - MATUKIO
+    </p>
+
+    <div class="bg-[#11732e] shadow-md rounded p-3 sm:p-4">
+
+    <div class="flex items-center px-4 py-3">
+
+  <!-- Logo -->
+  <p class="text-xl font-bold p-1 bg-white text-black rounded">
+    TARI-EMS
+  </p>
+
+  <!-- Nav -->
+<nav class="grid grid-cols-3 items-center text-white font-medium text-sm sm:text-lg flex-1">
+    <!-- Left -->
+    <a href="/" class="justify-self-start hover:text-yellow-300 transition p-3">
+      HOME
+    </a>
+
+    <!-- Center -->
+    <a href="/selcom" class="justify-self-center hover:text-yellow-300 transition">
+      EVENTS
+    </a>
+
+    <!-- Right -->
+    <a href="/vodacom" class="justify-self-end hover:text-yellow-300 transition">
+      GALLERY
+    </a>
+
+  </nav>
+
+</div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="py-10 p-10 ">
+   <!-- 🟢 STEP HEADER -->
+<!-- 🟢 STEP HEADER -->
+<div class="flex items-center justify-between mb-8 text-sm">
+
+  <div class="flex-1 text-center">
+    <div class="w-6 h-6 mx-auto rounded-full bg-gray-300 flex items-center justify-center">1</div>
+    <p class="mt-1">Event details</p>
+  </div>
+
+  <div class="flex-1 h-[2px] bg-gray-300"></div>
+
+  <div class="flex-1 text-center">
+    <div class="w-6 h-6 mx-auto rounded-full bg-gray-300 flex items-center justify-center">2</div>
+    <p class="mt-1">Event Registration</p>
+  </div>
+
+  <div class="flex-1 h-[2px] bg-green-700"></div>
+
+  <div class="flex-1 text-center">
+    <div class="w-6 h-6 mx-auto rounded-full bg-green-700 text-white flex items-center justify-center">3</div>
+    <p class="mt-1 font-semibold">Payments</p>
+  </div>
+
+</div>
+
+<!-- 💳 PAYMENT INSTRUCTIONS -->
+<div class="bg-white p-6 rounded-lg shadow-md space-y-4 cursor-pointer p-6 bg-white drop-shadow-md drop-shadow-[#11732e] 
+            flex flex-col gap-4 
+             rounded-lg">
+
+  <ol class="list-decimal ml-5 space-y-2 text-sm text-gray-800">
+
+    <li>Fungua app ya SELCOM au tumia nambari ya USSD kwenye simu yako.</li>
+    <li>Chagua "Lipa Namba" au "Pay Number".</li>
+    <li>Weka namba ya TARI Marathon: <strong>3456781</strong>.</li>
+    <li>Weka jina lako kamili kama reference (ikiwa inahitajika).</li>
+    <li>Weka kiasi cha usajili unachotaka kulipa.</li>
+    <li>Thibitisha malipo.</li>
+    <li>Hifadhi ujumbe wa uthibitisho (SMS) kwa kumbukumbu.</li>
+
+  </ol>
+
+  <!-- 📎 FILE UPLOAD -->
+  <div class="mt-6">
+    <p class="text-sm mb-2">
+      Ambatanisha risiti au screenshot ya muamala
+    </p>
+
+    <input type="file"
+           (change)="onFileSelected($event)"
+           class="block w-full text-sm border rounded p-2">
+  </div>
+
+</div>
+
+<!-- 🔘 ACTION BUTTON -->
+<div class="flex justify-end mt-6">
+  <button
+    (click)="submitRegistration()"
+    class="bg-green-700 text-white px-6 py-2 rounded hover:bg-green-800 transition">
+    Save
+  </button>
+</div></section>
+
+
+
+

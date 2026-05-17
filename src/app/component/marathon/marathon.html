@@ -1,0 +1,519 @@
+
+<!-- <section class="relative">
+
+  <div class="relative w-full h-[450px]">
+    <img src="/kilimanjaro-marathon-750x450.jpg" class="w-full h-full object-cover">
+    <div class="absolute inset-0 flex flex-col justify-top items-top bg-black/40 text-white text-center ">
+      <h1 class="text-4xl md:text-5xl font-bold drop-shadow-lg text-[#11732E] mt-20">TARI MARATHON 2026</h1>
+      <p class="text-lg md:text-xl mt-2 drop-shadow-sm text-[#11732E] " >(mbio za ustahimilivu, afya, na maendeleo)</p>
+      <button class="mt-6 bg-yellow-400  text-xl font-bold rounded-full w-24 h-24 flex items-center justify-center shadow-lg hover:bg-yellow-500 transition">
+
+    JISAJILI
+</button>
+    </div>
+  </div>
+</section> -->
+
+
+<section class="relative">
+
+  <!-- HERO -->
+  <div class="relative w-full h-[300px] sm:h-[380px] md:h-[450px]">
+   <!-- <video 
+  class="w-full h-full object-cover" 
+  autoplay 
+  muted 
+  loop 
+  playsinline
+>
+  <source src="/run.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video> -->
+
+ <img
+    *ngIf="currentMedia.type === 'image'"
+    [src]="currentMedia.src"
+    class="w-full h-full object-cover transition-opacity duration-700"
+  />
+
+  <!-- VIDEO -->
+  <video
+    *ngIf="currentMedia.type === 'video'"
+    class="w-full h-full object-cover transition-opacity duration-700"
+    autoplay
+    muted
+    playsinline
+    [loop]="true"
+  >
+    <source [src]="currentMedia.src" type="video/mp4">
+  </video>
+<!-- <video 
+  id="bgvideo"
+  class="w-full h-full object-cover"
+  [autoplay]="true"
+  [muted]="true"
+  [loop]="true"
+  playsinline
+>
+    <source src="/run.mp4" type="video/mp4">
+
+</video> -->
+    <!-- Overlay -->
+    <div class="absolute inset-0 flex flex-col items-center bg-black/30 text-center">
+      <h1 class="text-2xl → lg:text-5xl md:text-5xl font-bold drop-shadow-lg text-white mt-20">
+        TARI MARATHON 2026
+      </h1>
+      <p class="text-sm sm:text-base md:text-lg lg:text-xl mt-2 drop-shadow-sm text-white">
+        (mbio za ustahimilivu, afya, na maendeleo)
+      </p>
+
+      <!-- Centered circular JISAJILI button -->
+     <button  [routerLink]="['/']" class="relative mt-10 sm:mt-16 md:mt-20 lg:mt-24 bg-yellow-400 text-white text-sm sm:text-lg md:text-xl font-bold rounded-full w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 flex items-center justify-center shadow-lg hover:bg-yellow-500 transition">
+
+        <span class="absolute rounded-full border-2 border-[#11732E] w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20"></span>
+
+        <span class="absolute rounded-full border-2 border-[#11732E] w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16"></span>
+
+        <span class="absolute rounded-full border-2 border-[#11732E] w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"></span>
+
+  {{ 'NAV.REGISTER' | translate }}
+
+        JISAJILI
+      </button>
+    </div>
+  </div>
+</section>
+
+
+<section class="p-4 sm:p-6 md:p-10">
+
+  <div class="flex flex-col lg:flex-row justify-between items-center gap-8">
+
+    <!-- Left date -->
+    <div class="text-center lg:text-left ml-0">
+
+      <div class="bg-white drop-shadow-md drop-shadow-yellow-500 p-4">
+
+        <div class="bg-white drop-shadow-md drop-shadow-[#11732E] rounded p-4 sm:p-6 drop-shadow-[0_4px_6px_rgba(17,115,46,0.5)] max-w-[150px] mx-auto text-center">
+          <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold text-[#11732E]">{{days}}</h2>
+          <span class="text-gray-700">Siku</span>
+        </div>
+
+        <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 text-center mt-4">
+
+          <div class="bg-white shadow-md rounded p-3 sm:p-4 drop-shadow-md drop-shadow-[#11732e]">
+            <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-[#11732E]">{{hours}}</h2>
+            <span class="text-gray-700">Saa</span>
+          </div>
+
+          <div class="bg-white shadow-md rounded p-3 sm:p-4 drop-shadow-md drop-shadow-[#11732e]">
+            <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-[#11732E]">{{minutes}}</h2>
+            <span class="text-gray-700">Dakika</span>
+          </div>
+
+          <div class="bg-white shadow-md rounded p-3 sm:p-4 drop-shadow-md drop-shadow-[#11732e]">
+            <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-[#11732E] animate-pulse">{{seconds}}</h2>
+            <span class="text-gray-700">Sekunde</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Right date -->
+    <div class="text-center lg:text-right">
+
+      <h2 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-[#11732E]">
+        08<sup>th</sup> August
+      </h2>
+
+      <p class="font-bold text-[#11732E] text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+        2026
+      </p>
+
+      <p class="text-gray-700 text-base sm:text-lg">
+        Dodoma
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+<section class="text-center my-6 sm:my-8 md:my-10 px-4">
+  <button  [routerLink]="['/']" class="bg-[#11732E] text-white px-5 sm:px-6 md:px-8 py-2 sm:py-3 text-sm sm:text-base md:text-lg rounded-lg shadow-lg shadow-yellow-500 hover:bg-[#0e5a26] transition">
+    JISAJILI
+  </button>
+</section>
+<section class="py-6 sm:py-8 md:py-10 bg-white">
+
+  <!-- ABOUT -->
+  <div class="px-4 sm:px-6 md:px-8">
+
+  <h2 class="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold text-[#11732E] text-center mb-6 sm:mb-8 md:mb-8">
+    KUHUSU TARI MARATHON 2026
+  </h2>
+
+  <div class="flex flex-col md:flex-row items-start gap-6">
+
+    <!-- Text column -->
+    <div class="md:w-1/2 text-gray-700 text-base sm:text-lg md:text-lg lg:text-xl">
+
+      <p class="mb-4 text-justify">
+    Katika kutimiza miaka 10 ya Taasisi ya Utafiti wa Kilimo Tanzania (TARI), Taasisi imeandaa TARI Marathon 2026 kama sehemu ya maadhimisho ya muongo mmoja wa mafanikio katika utafiti, ubunifu na usambazaji wa teknolojia za kilimo.
+  </p>
+
+      <p class="mb-4 text-justify">
+    Tukio hili linalenga kuunganisha jamii, wadau wa sekta ya kilimo na umma kwa ujumla katika kuhamasisha afya bora, lishe, na matumizi ya teknolojia za kisasa za kilimo kwa maendeleo endelevu ya Taifa.
+  </p>
+
+  <h3 class="text-lg font-bold text-[#11732E] mb-3">
+    Malengo ya Marathon
+  </h3>
+
+  <p class="mb-4 text-justify">
+    Kupitia marathon hii, Taasisi inalenga kusaidia wakulima wadogo ambao ni uti wa mgongo wa kilimo nchini, kuwezesha jamii zilizo katika mazingira magumu, na kuongeza uelewa wa umuhimu wa tafiti za kisayansi katika kukuza kilimo chenye tija, endelevu na chenye uwezo wa kukabiliana na changamoto za mabadiliko ya tabianchi...
+  </p>
+
+  
+
+      <!-- CTA Button -->
+      <a href="/marathon/about-marathon"
+         class="inline-block bg-[#11732E] text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-800 transition">
+        Soma Zaidi →
+      </a>
+
+    </div>
+
+    <!-- Image column -->
+   <div class="md:w-1/2 mt-6 md:mt-0"> <img src="0V5A3548.jpg" alt="TARI Marathon" class="w-full h-auto rounded shadow-md object-cover"> </div>
+
+  </div>
+</div>
+
+</section>
+
+<section class="py-6 sm:py-8 md:py-10 px-4 sm:px-6 md:px-8
+bg-[linear-gradient(rgba(255,230,25,0.8),rgba(255,235,25,0.8)),url('/run.png')]
+bg-cover bg-center">
+  <!-- PARTICIPANTS -->
+
+
+  <div class=" inset-0 max-w-5xl mx-auto text-center ">
+
+
+    <h2 class="text-2xl sm:text-3xl md:text-3xl lg:text-3xl font-bold text-[#11732E] mb-6">
+      NAMNA YA KUJISAJILI
+    </h2>
+
+    <!-- Steps -->
+    <div class="flex flex-col gap-4">
+
+      <!-- Step 1 -->
+      <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
+        <div class="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white border-2 border-[#11732E] text-[#11732E] font-bold">
+          1
+        </div>
+        <p class="text-sm sm:text-base md:text-lg text-gray-700 text-left">
+          Tembelea ukurasa rasmi wa TARI Marathon.
+        </p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
+        <div class="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white border-2 border-[#11732E] text-[#11732E] font-bold">
+          2
+        </div>
+        <p class="text-sm sm:text-base md:text-lg text-gray-700 text-left">
+          Chagua aina ya mbio unayotaka kushiriki (5km, 10km, nusu marathon, au marathon kamili).
+        </p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
+        <div class="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white border-2 border-[#11732E] text-[#11732E] font-bold">
+          3
+        </div>
+        <p class="text-sm sm:text-base md:text-lg text-gray-700 text-left">
+          Jaza fomu ya usajili kwa jina lako, umri, namba ya simu, na barua pepe.
+        </p>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
+        <div class="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white border-2 border-[#11732E] text-[#11732E] font-bold">
+          4
+        </div>
+        <p class="text-sm sm:text-base md:text-lg text-gray-700 text-left">
+          Chagua njia ya malipo unayotaka kutumia (Selcom, Vodacom, YAS, au kadi za benki).
+        </p>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
+        <div class="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white border-2 border-[#11732E] text-[#11732E] font-bold">
+          5
+        </div>
+        <p class="text-sm sm:text-base md:text-lg text-gray-700 text-left">
+          Lipa ada ya usajili kupitia njia ulizoichagua.
+        </p>
+      </div>
+
+      <!-- Step 6 -->
+      <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
+        <div class="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white border-2 border-[#11732E] text-[#11732E] font-bold">
+          6
+        </div>
+        <p class="text-sm sm:text-base md:text-lg text-gray-700 text-left">
+          Pokea uthibitisho wa malipo na barua pepe ya uthibitisho kutoka TARI Marathon.
+        </p>
+      </div>
+
+      <!-- Step 7 -->
+      <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
+        <div class="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white border-2 border-[#11732E] text-[#11732E] font-bold">
+          7
+        </div>
+        <p class="text-sm sm:text-base md:text-lg text-gray-700 text-left">
+          Angalia maelezo ya tukio, muda na eneo la kuanzia mbio.
+        </p>
+      </div>
+
+      <!-- Step 8 -->
+      <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
+        <div class="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white border-2 border-[#11732E] text-[#11732E] font-bold">
+          8
+        </div>
+        <p class="text-sm sm:text-base md:text-lg text-gray-700 text-left">
+          Sogea kwenye eneo la kuanzia mbio siku ya tukio, vaa viatu vya kukimbia, na furahia mbio!
+        </p>
+      </div>
+
+<!-- API SERVICES -->
+
+<!-- <div *ngFor="let step of registrationSteps" class="flex flex-col sm:flex-row ...">
+  <div class="...">{{step.id}}</div>
+  <p>{{step.description}}</p>
+</div> -->
+
+
+    </div>
+  </div>
+</section>
+<section class="py-10 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-2 sm:px-4">
+    <h2 class="text-2xl sm:text-3xl font-bold text-[#11732E] text-center mb-6 sm:mb-8">
+      FANYA MALIPO KUPITIA
+    </h2>
+
+    <!-- ONE ROW NO SCROLL -->
+    <div class="flex justify-between items-center gap-2 sm:gap-4">
+
+      <!-- SELCOM -->
+      <a [routerLink]="['/selcom']">
+        <div
+          class="w-16 h-16 sm:w-24 sm:h-24 md:w-32 md:h-32
+                 bg-white rounded-full shadow flex flex-col items-center justify-center
+                 hover:shadow-lg transition cursor-pointer"
+          (click)="selectPayment('selcom')"
+        >
+          <img src="/images.png" class="w-6 sm:w-10 md:w-12 mb-1">
+          <p class="text-[10px] sm:text-xs text-green-700 text-center">SELCOM</p>
+        </div>
+      </a>
+
+      <!-- BANK -->
+      <a [routerLink]="['/card']">
+        <div
+          class="w-16 h-16 sm:w-24 sm:h-24 md:w-32 md:h-32
+                 bg-white rounded-full shadow flex flex-col items-center justify-center
+                 hover:shadow-lg transition cursor-pointer"
+          (click)="selectPayment('bank')"
+        >
+          <img src="/cards.jpeg" class="w-6 sm:w-10 md:w-12 mb-1">
+          <p class="text-[10px] sm:text-xs text-green-700 text-center">BANK</p>
+        </div>
+      </a>
+
+      <!-- VODACOM -->
+      <a [routerLink]="['/vodacom']">
+        <div
+          class="w-16 h-16 sm:w-24 sm:h-24 md:w-32 md:h-32
+                 bg-white rounded-full shadow flex flex-col items-center justify-center
+                 hover:shadow-lg transition cursor-pointer"
+          (click)="selectPayment('vodacom')"
+        >
+          <img src="/lipa_mpesa_livan.jpg" class="w-6 sm:w-10 md:w-12 mb-1">
+          <p class="text-[10px] sm:text-xs text-green-700 text-center">VODACOM</p>
+        </div>
+      </a>
+
+      <!-- YAS -->
+      <a [routerLink]="['/yas']">
+        <div
+          class="w-16 h-16 sm:w-24 sm:h-24 md:w-32 md:h-32
+                 bg-white rounded-full shadow flex flex-col items-center justify-center
+                 hover:shadow-lg transition cursor-pointer"
+          (click)="selectPayment('yas')"
+        >
+          <img src="/yas-1024x724.jpg" class="w-6 sm:w-10 md:w-12 mb-1">
+          <p class="text-[10px] sm:text-xs text-green-700 text-center">YAS</p>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+   <!-- FEES TABLE -->
+<div class="mt-10 px-4 sm:px-6 md:px-8">
+  <h3 class="text-xl sm:text-2xl font-bold text-center text-[#11732E] mb-6">
+    ADA ZA USHIRIKI
+  </h3>
+
+  <div class="overflow-x-auto">
+    <table class="min-w-full border border-gray-200 rounded-lg overflow-hidden">
+
+      <!-- Header -->
+      <thead>
+        <tr class="bg-[#11732e] text-white">
+          <th class="py-3 px-4 text-left">CATEGORY / ITEM</th>
+          <th class="py-3 px-4 text-right">Fee (Tzs)</th>
+        </tr>
+      </thead>
+
+      <!-- Body -->
+      <tbody class="text-gray-800">
+
+        <tr class="bg-[#063614] text-white">
+          <td class="py-3 px-4">42 Km Full Marathon</td>
+          <td class="py-3 px-4 text-right">45,000</td>
+        </tr>
+
+        <tr class="bg-[#178B3A] text-white">
+          <td class="py-3 px-4">21 Km Half Marathon</td>
+          <td class="py-3 px-4 text-right">45,000</td>
+        </tr>
+
+        <tr class="bg-[#063614] text-white">
+          <td class="py-3 px-4">10 Km Marathon/Fun Run</td>
+          <td class="py-3 px-4 text-right">25,000</td>
+        </tr>
+
+        <tr class="bg-[#178B3A] text-white">
+          <td class="py-3 px-4">10 Km Corporate Run</td>
+          <td class="py-3 px-4 text-right">500,000</td>
+        </tr>
+
+        <tr class="bg-[#063614] text-white">
+          <td class="py-3 px-4">5 Km Family/Fun Run</td>
+          <td class="py-3 px-4 text-right">20,000</td>
+        </tr>
+
+        <tr class="bg-[#178B3A] text-white">
+          <td class="py-3 px-4">3 Km School & Youth Sprint</td>
+          <td class="py-3 px-4 text-right">10,000</td>
+        </tr>
+
+        <tr class="bg-[#063614] text-white">
+          <td class="py-3 px-4">Schools & Institutes Sports Challenge</td>
+          <td class="py-3 px-4 text-right">500,000</td>
+        </tr>
+
+        <tr class="bg-[#178B3A] text-white">
+          <td class="py-3 px-4">Voluntary Donations</td>
+          <td class="py-3 px-4 text-right">1,000,000</td>
+        </tr>
+
+        <tr class="bg-[#063614] text-white">
+          <td class="py-3 px-4">Sponsorships (Main & Sub)</td>
+          <td class="py-3 px-4 text-right">50,000,000</td>
+        </tr>
+
+        <tr class="bg-[#178B3A] text-white">
+          <td class="py-3 px-4">T-shirts & Merchandise Sales</td>
+          <td class="py-3 px-4 text-right">20,000</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+
+  <h2 class="text-3xl font-bold text-[#11732E] p-4 mb-6">wadhamin</h2>
+
+  <!-- API SERVICES -->
+<!-- <div *ngFor="let sponsor of sponsors" class="...">
+  <img [src]="sponsor.logo" alt="{{sponsor.name}}">
+  <p>{{sponsor.name}}</p>
+</div> -->
+
+<section class="py-10 bg-gray-50 overflow-hidden">
+
+  <div class="max-w-6xl mx-auto">
+
+    <div class="flex gap-4 sm:gap-6 md:gap-10 animate-scroll whitespace-nowrap">
+
+      <!-- Selcom -->
+      <div class="relative p-2 sm:p-3 md:p-4 bg-white rounded-full 
+                  w-16 h-16 sm:w-24 sm:h-24 md:w-32 md:h-32
+                  drop-shadow-md drop-shadow-[#11732e]
+                  flex flex-col items-center justify-center overflow-hidden">
+
+        
+        <img src="/images.png" class="w-6 sm:w-10 md:w-12 mb-1 z-10">
+        <p class="text-[10px] sm:text-xs md:text-sm font-semibold text-[#11732E] z-10">
+          SELCOM
+        </p>
+
+      </div>
+
+      <!-- Bank -->
+      <div class="relative p-2 sm:p-3 md:p-4 bg-white rounded-full 
+                  w-16 h-16 sm:w-24 sm:h-24 md:w-32 md:h-32
+                  drop-shadow-md drop-shadow-[#11732e]
+                  flex flex-col items-center justify-center overflow-hidden">
+
+      
+        <img src="/cards.jpeg" class="w-6 sm:w-10 md:w-12 mb-1 z-10">
+        <p class="text-[10px] sm:text-xs md:text-sm font-semibold text-[#11732E] z-10">
+          BANK
+        </p>
+
+      </div>
+
+      <!-- Vodacom -->
+      <div class="relative p-2 sm:p-3 md:p-4 bg-white rounded-full 
+                  w-16 h-16 sm:w-24 sm:h-24 md:w-32 md:h-32
+                  drop-shadow-md drop-shadow-[#11732e]
+                  flex flex-col items-center justify-center overflow-hidden">
+
+        <img src="/lipa_mpesa_livan.jpg" class="w-6 sm:w-10 md:w-12 mb-1 z-10">
+        <p class="text-[10px] sm:text-xs md:text-sm font-semibold text-[#11732E] z-10">
+          VODACOM
+        </p>
+
+      </div>
+
+      <!-- YAS -->
+      <div class="relative p-2 sm:p-3 md:p-4 bg-white rounded-full 
+                  w-16 h-16 sm:w-24 sm:h-24 md:w-32 md:h-32
+                  drop-shadow-md drop-shadow-[#11732e]
+                  flex flex-col items-center justify-center overflow-hidden">
+
+        <img src="/yas-1024x724.jpg" class="w-6 sm:w-10 md:w-12 mb-1 z-10">
+        <p class="text-[10px] sm:text-xs md:text-sm font-semibold text-[#11732E] z-10">
+          YAS
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

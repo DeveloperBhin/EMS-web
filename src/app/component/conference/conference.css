@@ -1,0 +1,39 @@
+/* * {
+  outline: 1px solid red;
+} */
+/* DESKTOP (your original shape) */
+.right-panel {
+  clip-path: polygon(
+    100% 0%,
+    38% 0%,
+    24% 64%,
+    0% 100%,
+    100% 100%
+  );
+}
+
+/* 📱 MOBILE */
+@media (max-width: 640px) {
+  .right-panel {
+    clip-path: polygon(
+      100% 0%,
+      60% 0%,   /* push curve right */
+      45% 72%,  /* reduce cut depth */
+      28% 100%, /* protect left content */
+      100% 100%
+    );
+  }
+}
+
+/* 📲 TABLET */
+@media (min-width: 641px) and (max-width: 1023px) {
+  .right-panel {
+    clip-path: polygon(
+      100% 0%,
+      45% 0%,
+      30% 65%,
+      8% 100%,
+      100% 100%
+    );
+  }
+}

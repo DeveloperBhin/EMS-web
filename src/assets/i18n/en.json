@@ -1,0 +1,12 @@
+{
+  "NAV": {
+    "MARATHON": "Marathon",
+    "REGISTER": "REGISTER",
+    "INSTRUCTIONS": "Marathon Guidelines",
+    "WINNERS": "Winners",
+    "ABOUT": "About TARI Marathon",
+    "GALLERY": "Gallery",
+    "SGR":"sgr tickets"
+  },
+  "CTA": "Register Now"
+}

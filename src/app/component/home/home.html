@@ -1,0 +1,399 @@
+<section>
+  <div class="max-w-5xl mx-auto py-6 sm:py-10 px-4 sm:px-6 lg:px-8">
+
+    <p class="text-xl sm:text-2xl font-bold p-2">
+      HABARI - MATUKIO
+    </p>
+
+    <div class="bg-[#11732e] shadow-md rounded p-3 sm:p-4">
+
+    <div class="flex items-center px-4 py-3">
+  <!-- Logo -->
+  <p class="text-xl font-bold p-1 bg-white text-black rounded text-base text-xs sm:text-sm md:text-xl lg:text-2xl">
+    TARI-EMS
+  </p>
+  <!-- Nav -->
+<nav class="grid grid-cols-3 items-center text-white text-base text-xs  sm:text-sm md:text-xl lg:text-2xl font-semibold flex-1">
+  <!-- <nav class="grid grid-cols-3 items-center text-white font-semibold text-xs sm:text-sm md:text-lg lg:text-xl"> -->
+  
+  <!-- Left -->
+    <a href="/" class="justify-self-end hover:text-yellow-300 transition ">
+      HOME
+    </a>
+
+    <!-- Center -->
+    <a href="/events" class="justify-self-end hover:text-yellow-300 transition ">
+      EVENTS
+    </a>
+    <!-- Right -->
+   <a href="https://maria2438.pixieset.com/uzinduzimarathon/"
+      target="_blank"
+      rel="noopener noreferrer"
+   class="justify-self-end hover:text-yellow-300 transition ">
+  GALLERY
+</a>
+  </nav>
+</div>
+ </div>
+
+  </div>
+</section>
+
+ <p class=" italic text-xl sm:text-2xl font-bold p-2">
+UPCOMING EVENTS
+    </p>
+
+
+<section class="py-10 ">
+  <!-- PAYMENTS -->
+  <div class="max-w-5xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-1 gap-6 ">
+      <div class="  cursor-pointer p-10 bg-white    drop-shadow-md drop-shadow-[#11732e] flex flex-col items-center hover:shadow-lg transition overflow-hidden"
+          >
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 ">
+    
+    <div *ngFor="let event of events$ | async" class="p-4   rounded-lg drop-shadow-black  drop-shadow-md bg-[#11732e] text-white scale-105 rotate-1 hover:drop-shadow-2xl  hover:scale-100 "> 
+    <img 
+        [src]="event.featuredImage" 
+        alt="event image"
+        class="w-full h-80 object-cover rounded mb-3"
+      />
+  
+     <span 
+    class="absolute top-5 right-3 bg-yellow-500 
+           px-3 py-1  italic text-xl sm:text-sm  font-bold  shadow-md">
+    UPCOMING
+  </span>
+
+      <h3 class="text-xl font-semibold">{{ event.title }}</h3>
+      <p class="text-yellow-300">{{ event.description }}</p>
+
+      <p class="mt-2"><strong>Category:</strong> {{ event.category }}</p>
+      <p><strong>Type:</strong> {{ event.eventType }}</p>
+
+      <p class="mt-2">
+        <strong>Date:</strong> {{ event.startDate }} → {{ event.endDate }}
+      </p>
+
+      <p *ngIf="event.location">
+        <strong>Location:</strong> {{ event.location }}
+      </p>
+
+      <p *ngIf="event.eventTime" class="p-2">
+        <strong>Time:</strong> {{ event.eventTime }}
+      </p>
+
+      
+       <a 
+       *ngIf="event.eventLink"
+            [href]="event.eventLink" 
+            class="mt-4 text-white bg-yellow-500 px-4 py-2 rounded hover:bg-yellow-700 w-fit ">
+            View Event
+          </a>
+
+    </div>
+
+
+
+  </div>
+            <div >
+</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+ <p class=" italic text-xl sm:text-2xl font-bold p-2">
+RECENTLY EVENTS
+    </p>
+
+<section class="py-10 ">
+  <!-- PAYMENTS -->
+  <div class="max-w-5xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-1 gap-6 ">
+      <div class="cursor-pointer p-10 bg-white    drop-shadow-md drop-shadow-[#11732e] flex flex-col items-center hover:shadow-lg transition overflow-hidden"
+          >
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 ">
+    
+    <div *ngFor="let completedevent of completedEvents$ | async" class="p-4   rounded-lg drop-shadow-black  drop-shadow-md bg-[#11732e] text-white scale-105 rotate-1 hover:drop-shadow-2xl  hover:scale-100 ">
+      
+      <img 
+        [src]="completedevent.featuredImage" 
+        alt="completedevent image"
+        class="w-full h-80 object-cover rounded mb-3"
+      />
+  
+     <span 
+    class="absolute top-5 right-3 bg-yellow-500 
+           px-3 py-1  italic text-xl sm:text-sm  font-bold  shadow-md">
+    COMPLETED
+  </span>
+
+      <h3 class="text-xl font-semibold">{{ completedevent.title }}</h3>
+      <p class="text-yellow-300">{{ completedevent.description }}</p>
+
+      <p class="mt-2"><strong>Category:</strong> {{ completedevent.category }}</p>
+      <p><strong>Type:</strong> {{ completedevent.eventType }}</p>
+
+      <p class="mt-2">
+        <strong>Date:</strong> {{ completedevent.startDate }} → {{ completedevent.endDate }}
+      </p>
+
+      <p *ngIf="completedevent.location">
+        <strong>Location:</strong> {{ completedevent.location }}
+      </p>
+
+      <p *ngIf="completedevent.eventTime" class="p-2">
+        <strong>Time:</strong> {{ completedevent.eventTime }}
+      </p>
+
+      
+       <a 
+       *ngIf="completedevent.eventLink"
+            [href]="completedevent.eventLink" 
+            class="mt-4 text-white bg-yellow-500 px-4 py-2 rounded hover:bg-yellow-700 w-fit ">
+            View Event
+          </a>
+
+    </div>
+
+
+
+  </div>
+           
+    <div >
+
+    </div>
+      </div>
+
+   
+     
+    </div>
+
+  </div>
+</section>
+
+<section class="py-10 ">
+
+  <div class="max-w-3xl mx-auto drop-shadow-md drop-shadow-[#11732E] bg-yellow-600  p-6">
+
+    <div 
+      class="flex justify-between items-center bg-yellow-600 text-white px-6 py-4 rounded-lg cursor-pointer shadow-md drop-shadow-[#11732E]"
+      (click)="toggleEvents()">
+
+      <h2 class="text-lg font-bold text-[#11732E]">
+                Choose an event to register
+
+      </h2>
+
+      <!-- Arrow -->
+      <span class="text-2xl transition-transform"
+            [class.rotate-180]="showEvents">
+        ▼
+      </span>
+    </div>
+
+    <div *ngIf="showEvents" 
+         class="mt-4 bg-white p-4 rounded-lg shadow-md space-y-3">
+
+      <p class="italic text-sm font-bold text-[#11732E]">
+        Register for an Event
+      </p>
+
+      <!-- EVENTS -->
+     <div *ngFor="let event of events$ | async"
+     class="relative p-4 rounded-lg bg-[#11732e] text-white shadow-md">
+
+  <!-- STATUS -->
+  <span class="absolute top-3 right-3 bg-yellow-500 px-3 py-1 text-xs font-bold shadow">
+    UPCOMING
+  </span>
+
+  <!-- TITLE -->
+  <h3 class="text-lg font-semibold mb-3">
+    {{ event.title }}
+  </h3>
+
+  <!-- DETAILS -->
+  <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-sm">
+
+    <p class="text-yellow-300 col-span-2 sm:col-span-3">
+      {{ event.description }}
+    </p>
+
+    <p><strong>Category:</strong> {{ event.category }}</p>
+    <p><strong>Type:</strong> {{ event.eventType }}</p>
+
+    <p class="col-span-2">
+      <strong>Date:</strong> {{ event.startDate }} → {{ event.endDate }}
+    </p>
+
+    <p *ngIf="event.location">
+      <strong>Location:</strong> {{ event.location }}
+    </p>
+
+    <p *ngIf="event.eventTime">
+      <strong>Time:</strong> {{ event.eventTime }}
+    </p>
+
+  </div>
+  <!-- 🔘 REGISTER BUTTON -->
+  <button
+    (click)="goToRegister(event); $event.stopPropagation()"
+    class="mt-4 bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-400 transition">
+   Register
+  </button>
+</div>
+    </div>
+
+</div>
+
+</section>
+
+
+<section class="py-10 p-8">
+
+ 
+
+   <div class="bg-[#11732e] shadow-md rounded p-3 sm:p-4">
+
+    <div class="flex items-center px-4 py-3">
+
+  
+
+  <!-- Nav -->
+<nav class="grid grid-cols-3 items-center text-white font-medium text-sm sm:text-lg flex-1">
+    <!-- Left -->
+    <a  class="justify-self-start hover:text-yellow-300 transition p-3">
+    
+
+       <p class="text-2xl items-center px-6">0{{(events$ | async)?.length}} </p>
+<p class="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold">
+  Events
+</p>
+    </a>
+
+    <!-- Center -->
+    <a  class="justify-self-center hover:text-yellow-300 transition">
+      
+       <p class="text-2xl items-center px-6">0{{(events$ | async)?.length}} </p>
+        <p class="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold">
+  Participant
+</p>
+    </a>
+
+    <!-- Right -->
+    <a  class="justify-self-end hover:text-yellow-300 transition">
+       <p class="text-2xl items-center px-6">0{{(events$ | async)?.length}} </p>
+        <p class="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold">
+  Partners
+</p>
+    </a>
+
+  </nav>
+
+</div>
+
+    </div>
+
+</section>
+
+ <p class="  text-xl sm:text-2xl font-bold p-6">
+TESTIMONIALS
+    </p>
+
+
+<section class="py-10 p-6  ">
+  <!-- PAYMENTS -->
+  <div class="max-w-5xl mx-auto">
+   <div class="grid grid-cols-1 md:grid-cols-2 gap-10  ">
+  <!-- CARD 1 -->
+<div *ngFor="let events of completedEvents$ | async" 
+     class="cursor-pointer p-6 bg-white drop-shadow-md drop-shadow-[#11732e] 
+            flex flex-col gap-4 
+            hover:shadow-lg hover:scale-105 transition duration-300 rounded-lg">
+
+  <!-- 👤 PROFILE ROW -->
+  <div class="flex items-center gap-4">
+
+    <!-- IMAGE -->
+    <img 
+      [src]="events.featuredImage" 
+      alt="profile image"
+      class="w-14 h-14 object-cover rounded-full border-2 border-[#11732e]"
+    />
+
+    <!-- NAME + ROLE -->
+    <div>
+      <p class="font-semibold text-gray-800">
+        {{ events.title || 'Event Participant' }}
+      </p>
+
+      <p class="text-sm text-gray-500">
+        {{ events.location || 'Tanzania' }}
+      </p>
+    </div>
+
+  </div>
+
+  <!-- 💬 TESTIMONIAL TEXT -->
+  <p class="text-gray-700 leading-relaxed">
+    Kama mshiriki wa World Soil Day (2 Desemba 2025) iliyoandaliwa na Tanzania Agricultural Research Institute (TARI), nilipata maarifa muhimu kuhusu afya ya udongo na kilimo endelevu, na tukio hilo limenihamasisha kuchangia maendeleo ya kilimo.
+  </p>
+
+  <!-- ✍️ SIGNATURE -->
+  <p class="italic text-sm text-gray-500">
+    — Mshiriki, World Soil Day 2025
+  </p>
+
+</div>
+
+  <!-- CARD 2 -->
+<div *ngFor="let events of completedEvents$ | async" 
+     class="cursor-pointer p-6 bg-white drop-shadow-md drop-shadow-[#11732e] 
+            flex flex-col gap-4 
+            hover:shadow-lg hover:scale-105 transition duration-300 rounded-lg">
+
+  <!-- 👤 PROFILE ROW -->
+  <div class="flex items-center gap-4">
+
+    <!-- IMAGE -->
+    <img 
+      [src]="events.featuredImage" 
+      alt="profile image"
+      class="w-14 h-14 object-cover rounded-full border-2 border-[#11732e]"
+    />
+
+    <!-- NAME + ROLE -->
+    <div>
+      <p class="font-semibold text-gray-800">
+        {{ events.title || 'Event Participant' }}
+      </p>
+
+      <p class="text-sm text-gray-500">
+        {{ events.location || 'Tanzania' }}
+      </p>
+    </div>
+  </div>
+<!-- 💬 TESTIMONIAL TEXT -->
+  <p class="text-gray-700 leading-relaxed">
+    Kama mshiriki wa World Soil Day (2 Desemba 2025) iliyoandaliwa na Tanzania Agricultural Research Institute (TARI), nilipata maarifa muhimu kuhusu afya ya udongo na kilimo endelevu, na tukio hilo limenihamasisha kuchangia maendeleo ya kilimo.
+  </p>
+
+ <!-- ✍️ SIGNATURE -->
+  <p class="italic text-sm text-gray-500">
+    — Mshiriki, World Soil Day 2025
+  </p>
+
+</div>
+</div>
+   
+     
+    </div>
+
+</section>
+
+
