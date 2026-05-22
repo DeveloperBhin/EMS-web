@@ -6,7 +6,26 @@
     "WINNERS": "Winners",
     "ABOUT": "About TARI Marathon",
     "GALLERY": "Gallery",
-    "SGR":"sgr tickets"
+    "SGR":"sgr tickets",
+    "SIKU":"Days",
+    "SAA":"Time",
+    "DAKIKA":"minute",
+    "SEKUNDE":"seconds",
+            "ABOUT MARATHONI":"ABOUT TARI MARATHONI 2026",
+            "Katika kutimiza miaka 10":"In celebration of the 10th anniversary of the Tanzania Agricultural Research Institute (TARI), the Institute has organized the TARI Marathon 2026 as part of commemorating a decade of achievements in agricultural research, innovation, and the dissemination of agricultural technologies.",
+            "Tukio hili linalenga":"The event aims to bring together the community, stakeholders in the agricultural sector, and the general public to promote good health, nutrition, and the use of modern agricultural technologies for the sustainable development of the nation.",
+"malengo":"Marathon Goals",
+"Kupitia marathon hii":"Through this marathon, the Institute aims to support smallholder farmers who are the backbone of agriculture in the country, empower communities in vulnerable environments, and increase awareness of the importance of scientific research in promoting productive, sustainable, and climate-resilient agriculture...",
+"soma zaidi":"Read more",
+"NAMNA YA KUJISAJILI":"HOW TO REGISTER",
+"1":"Visit the official TARI Marathon page",
+"2":"Choose the type of race you want to participate in (5km, 10km, half marathon, or full marathon)",
+"3":"Fill out the registration form with your name, age, phone number, and email address.",
+"4":"Choose the payment method you want to use (Selcom, Vodacom, YAS, or bank cards).",
+"5":"Pay the registration fee through your chosen method.",
+"6":"Receive your registration confirmation and be ready to participate in the event.",
+"7":"Check the event details, time, and starting location of the race",
+"8":"Head to the starting area on the day of the event, put on your running shoes, and enjoy the race!"
   },
   "CTA": "Register Now"
 }

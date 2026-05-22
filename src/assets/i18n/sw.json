@@ -6,7 +6,27 @@
     "WINNERS": "Washindi",
     "ABOUT": "Kuhusu TARI marathoni",
     "GALLERY": "Picha za matukio",
-    "SGR":"tiketi ya sgr"
+    "SGR":"tiketi ya sgr",
+     "SIKU":"Siku",
+    "SAA":"Saa",
+    "DAKIKA":"dakika",
+    "SEKUNDE":"Sekunde",
+    "ABOUT MARATHONI":"KUHUSU TARI MARATHON 2026",
+"Katika kutimiza miaka 10":"Katika kutimiza miaka 10 ya Taasisi ya Utafiti wa Kilimo Tanzania (TARI), Taasisi imeandaa TARI Marathon 2026 kama sehemu ya maadhimisho ya muongo mmoja wa mafanikio katika utafiti, ubunifu na usambazaji wa teknolojia za kilimo",
+"Tukio hili linalenga":"Tukio hili linalenga kuunganisha jamii, wadau wa sekta ya kilimo na umma kwa ujumla katika kuhamasisha afya bora, lishe, na matumizi ya teknolojia za kisasa za kilimo kwa maendeleo endelevu ya Taifa.",
+"malengo":"Malengo ya Marathon",
+"Kupitia marathon hii":"Kupitia marathon hii, Taasisi inalenga kusaidia wakulima wadogo ambao ni uti wa mgongo wa kilimo nchini, kuwezesha jamii zilizo katika mazingira magumu, na kuongeza uelewa wa umuhimu wa tafiti za kisayansi katika kukuza kilimo chenye tija, endelevu na chenye uwezo wa kukabiliana na changamoto za mabadiliko ya tabianchi...",
+"soma zaidi":"Soma zaidi",
+"NAMNA YA KUJISAJILI":"NAMNA YA KUJISAJILI",
+"1":"Tembelea ukurasa rasmi wa TARI Marathon",
+"2":"Chagua aina ya mbio unayotaka kushiriki (5km, 10km, nusu marathon, au marathon kamili)",
+"3":"Jaza fomu ya usajili kwa jina lako, umri, namba ya simu, na barua pepe.",
+"4":"Chagua njia ya malipo unayotaka kutumia (Selcom, Vodacom, YAS, au kadi za benki).",
+"5":"Lipa ada ya usajili kupitia njia ulizoichagua.",
+"6":"Pata kitambulisho cha usajili na uweze kushiriki katika tukio.",
+"7":"Angalia maelezo ya tukio, muda na eneo la kuanzia mbio.",
+"8":"Sogea kwenye eneo la kuanzia mbio siku ya tukio, vaa viatu vya kukimbia, na furahia mbio!"
+          
   },
   "CTA": "Jisajili Sasa"
 }
