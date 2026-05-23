@@ -25,7 +25,10 @@
 "5":"Pay the registration fee through your chosen method.",
 "6":"Receive your registration confirmation and be ready to participate in the event.",
 "7":"Check the event details, time, and starting location of the race",
-"8":"Head to the starting area on the day of the event, put on your running shoes, and enjoy the race!"
+"8":"Head to the starting area on the day of the event, put on your running shoes, and enjoy the race!",
+"PAYMENT":"MAKE PAYMENT THROUGH",
+"ADA ZA USHIRIKI":"PARTICIPATION FEES",
+"wadhamini":"SPONSORS"
   },
   "CTA": "Register Now"
 }
