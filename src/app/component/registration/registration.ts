@@ -4,8 +4,9 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { Observable } from 'rxjs/internal/Observable';
+import { Observable } from 'rxjs';
 
+import { Country, State } from 'country-state-city';
 @Component({
   selector: 'app-registration',
   imports: [CommonModule,FormsModule],
@@ -16,13 +17,22 @@ import { Observable } from 'rxjs/internal/Observable';
 export class Registration implements OnInit  {
 
 events$!: Observable<any[]>;
-
+countries: any[] = [];
+regions: any[] = [];
 constructor(
   private route: ActivatedRoute,
   private http: HttpClient,
   private router: Router
-) {}
+) {
+  const currentYear = new Date().getFullYear();
+  for (let y = currentYear; y >= 1900; y--) {
+    this.years.push(y);
+  }
+}
+ countryList: string[] = [];
 
+  
+activeTab: 'jisajili' | 'kikundi' | 'changia' = 'jisajili';
 eventId!: string;
 
 ngOnInit() {
@@ -40,6 +50,15 @@ const api$ = this.http.get<any>(
   //           console.log("Event loaded:", res);
 
   //   });
+
+   this.countries = Country.getAllCountries();
+     this.phoneCountries = Country.getAllCountries();
+
+}
+
+// when user selects country
+onCountryChange(countryCode: string) {
+  this.regions = State.getStatesOfCountry(countryCode);
 }
 goToPayments(event: any) {
 this.router.navigate(['/payment', this.eventId]);}
@@ -47,19 +66,68 @@ goToDetails(event: any) {
   this.router.navigate(['/details', event.id]);
 }
 
-formData = {
+phoneCountries: any[] = [];
+selectedDial = '+1';
+onPhoneCountryChange(countryCode: string) {
+  const country = this.phoneCountries.find(c => c.isoCode === countryCode);
+
+  this.selectedDial = country?.phonecode
+    ? `+${country.phonecode}`
+    : '+1';
+
+  this.buildFullPhone();
+}
+
+formData: any = {
   name: '',
   phone: '',
   email: '',
   age: '',
+  yearOfBirth: '',
+  group: '',
+  location: '',
+  amount: '',
+  paymentMethod: '',
+  raceType: '',
   tshirtSize: '',
   pickupLocation: '',
-  raceType: '',
+  country :'',
+  region: '',
+  Gender:'',
+    phoneCountry: 'TZ',
+  fullPhone: '',
+   
   agreed: false
 };
+years: number[] = [];
+buildFullPhone() {
+  this.formData.fullPhone = `${this.selectedDial}${this.formData.phone}`;
+}
+
+
+amount: number = 0;
+formattedAmount: string = '';
+
+onAmountInput(event: any) {
+  let value = event.target.value;
+
+  // remove commas
+  value = value.replace(/,/g, '');
+
+  // allow only numbers
+  if (isNaN(value)) return;
+
+  this.amount = Number(value);
+
+  // format with commas
+  this.formattedAmount = this.amount
+    ? this.amount.toLocaleString()
+    : '';
+}
+
 
 isValidEmail(email: string): boolean {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 }
 

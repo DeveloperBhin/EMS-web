@@ -23,7 +23,7 @@ export class Marathon implements OnInit, AfterViewInit, OnDestroy {
 
 
   
-  targetDate = new Date('2026-08-04T00:00:00');
+  targetDate = new Date('2026-08-02T00:00:00');
 
   days = 0;
   hours = 0;
