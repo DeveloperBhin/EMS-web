@@ -40,7 +40,7 @@ export const routes: Routes = [
             .then(m => m.Home)
       },
       {
-        path: 'registration/:id',
+        path: 'registration',
         loadComponent: () =>
           import('./component/registration/registration')
             .then(m => m.Registration)
