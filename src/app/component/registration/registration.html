@@ -20,11 +20,10 @@
     <a href="/" class="justify-self-start hover:text-yellow-300 transition p-3">
       HOME
     </a>
-
-    <!-- Center -->
+<!-- 
     <a href="/selcom" class="justify-self-center hover:text-yellow-300 transition">
       EVENTS
-    </a>
+    </a> -->
 
     <!-- Right -->
     <a href="/vodacom" class="justify-self-end hover:text-yellow-300 transition">
@@ -44,24 +43,24 @@
    <!-- 🟢 STEP HEADER -->
 <div class="flex items-center justify-between mb-8 text-sm">
 
-  <div class="flex-1 text-center">
+  <!-- <div class="flex-1 text-center">
     <div class="w-6 h-6 mx-auto rounded-full bg-gray-300 flex items-center justify-center">1</div>
     <p class="mt-1">Event details</p>
-  </div>
+  </div> -->
 
   <div class="flex-1 h-[2px] bg-green-700"></div>
 
   <div class="flex-1 text-center">
-    <div class="w-6 h-6 mx-auto rounded-full bg-green-700 text-white flex items-center justify-center">2</div>
+    <div class="w-6 h-6 mx-auto rounded-full bg-green-700 text-white flex items-center justify-center"></div>
     <p class="mt-1 font-semibold">Event Registration</p>
   </div>
 
-  <div class="flex-1 h-[2px] bg-gray-300"></div>
+  <div class="flex-1 h-[2px] bg-green-700"></div>
 
-  <div class="flex-1 text-center">
+  <!-- <div class="flex-1 text-center">
     <div class="w-6 h-6 mx-auto rounded-full bg-gray-300 flex items-center justify-center">3</div>
     <p class="mt-1">Payments</p>
-  </div>
+  </div> -->
 
 </div>
 
@@ -75,25 +74,25 @@
   <!-- TAB BUTTONS -->
   <div class="grid grid-cols-2 gap-2 mb-6">
 
-    <button type="button"
+    <!-- <button type="button"
       (click)="activeTab = 'jisajili'"
       [ngClass]="activeTab === 'jisajili'
         ? 'bg-green-600 text-white'
         : 'bg-gray-200'"
       class="px-4 py-2 rounded">
       Jisajili
-    </button>
+    </button> -->
 
    
 
-    <button type="button"
+    <!-- <button type="button"
       (click)="activeTab = 'changia'"
       [ngClass]="activeTab === 'changia'
         ? 'bg-green-600 text-white'
         : 'bg-gray-200'"
       class="px-4 py-2 rounded">
       Changia
-    </button>
+    </button> -->
 
   </div>
 
@@ -141,6 +140,8 @@
     type="tel"
     [(ngModel)]="formData.phone"
     (input)="buildFullPhone()"
+      name="phone"
+
     class="w-2/3 border border-yellow-600 px-3 py-2 rounded"
     placeholder="Namba ya simu">
 
@@ -210,17 +211,17 @@
 
   </div>
      </div>
-<!-- 🔹 EVENT SPECIFICATION -->
-    <div 
-     class="cursor-pointer p-6 bg-white drop-shadow-md drop-shadow-[#11732e] 
-            flex flex-col gap-4 mb-6
-             rounded-lg">
-  <div class=" rounded-lg p-4 shadow-sm">
 
+
+             <div class="mb-8 text-sm">
+
+  <div class="flex items-center justify-between">
     <p class="font-semibold mb-4">Event Specification</p>
+  </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
+    <!-- T-shirt Size -->
      <select [(ngModel)]="formData.tshirtSize"
         name="tshirtSize"
         class="w-full border border-yellow-600 px-3 py-2 rounded mt-1">
@@ -237,7 +238,8 @@
 
 </select>
 
- <select [(ngModel)]="formData.pickupLocation"
+    <!-- Pickup Location -->
+  <select [(ngModel)]="formData.pickupLocation"
         name="pickupLocation"
         class="w-full border border-yellow-600 px-3 py-2 rounded mt-1">
   <option value="" disabled selected hidden>Eneo la kuchukulia T-shirts</option>
@@ -262,7 +264,7 @@
                             <option value="17">Maruku</option>
 </select>
 
-
+   
 <select [(ngModel)]="formData.raceType"
         name="raceType"
         class="w-full border border-yellow-600 px-3 py-2 rounded mt-1">
@@ -272,12 +274,6 @@
   <option>10km - TZS 45,000.00/=</option>
   <option>21km - TZS 45,000.00/=</option>
 </select>
-  <input type="text"
-       [(ngModel)]="formData.Groupname"
-       name="Groupname"
-       class="w-full border border-yellow-600 px-3 py-2 rounded mt-1"
-       placeholder="jina la kikundi (optional)">
-    </div>
 
   </div>
   <div class=" rounded-lg p-4 shadow-sm">
@@ -335,10 +331,151 @@
        placeholder="Namba ya kitambulisho">
 
     </div>
+</div>
+   
 
-    </div>
 
-  <!-- 🔹 TERMS -->
+   
+  
+
+ 
+
+    <p class="font-semibold mb-4 text-sm sm:text-base">
+  Event Payment Attachment
+</p>
+
+<!-- Tabs -->
+<div class="flex flex-col sm:flex-col gap-2 sm:gap-3 mb-4">
+  
+  <button
+    type="button"
+    (click)="activeTabs = 'ControlNumber'"
+    [ngClass]="activeTabs === 'ControlNumber'
+      ? 'bg-green-600 text-white'
+      : 'bg-gray-200'"
+    class="w-full sm:w-auto px-4 py-2 rounded text-sm sm:text-base">
+    Control Number
+  </button>
+
+  <button
+    type="button"
+    (click)="activeTabs = 'MixxbyYas'"
+    [ngClass]="activeTabs === 'MixxbyYas'
+      ? 'bg-green-600 text-white'
+      : 'bg-gray-200'"
+    class="w-full sm:w-auto px-4 py-2 rounded text-sm sm:text-base">
+    Mixx by Yas
+  </button>
+
+</div>
+  <div *ngIf="activeTabs === 'ControlNumber'" class="w-full">
+
+  <div class="bg-white rounded-lg shadow p-4 sm:p-6">
+
+    <ol class="list-decimal list-inside space-y-3 text-sm sm:text-base leading-relaxed text-gray-700">
+
+      <li>
+        Fungua huduma ya malipo kwenye benki, M-Pesa, Airtel Money, Mixx by Yas, HaloPesa au app ya benki.
+      </li>
+
+      <li>
+        Chagua sehemu ya <strong>Lipa Control Number</strong>.
+      </li>
+
+      <li>
+        Weka TARI Control Number:
+        <strong class="text-green-600">996200075789</strong>
+      </li>
+
+             <li>Weka kiasi <strong>TZS 45,000</strong></li>
+
+
+      <li>
+        Thibitisha taarifa za malipo zinazoonekana.
+      </li>
+
+      <li>
+        Kamilisha malipo.
+      </li>
+
+      <li>
+        Hifadhi SMS au risiti kama uthibitisho wa malipo.
+      </li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+
+<div *ngIf="activeTabs === 'MixxbyYas'" class="w-full">
+
+  <div class="bg-white rounded-lg shadow p-4 sm:p-6">
+
+    <ol class="list-decimal list-inside space-y-3 text-sm sm:text-base leading-relaxed text-gray-700">
+
+      <li>
+        Fungua huduma ya malipo kwenye benki, M-Pesa, Airtel Money, Mixx by Yas, HaloPesa au app ya benki.
+      </li>
+
+      <li>
+        Chagua sehemu ya <strong>Lipa MixxbyYas</strong>.
+      </li>
+
+      <li>
+        Weka Namba ya malipo:
+        <strong class="text-green-600">223567375</strong>
+      </li>
+
+        <li>Jina litatokea<strong>TARI MARATHONI 2026:</strong>.
+        </li>
+
+        <li>Weka kiasi <strong>TZS 45,000</strong></li>
+
+
+      <li>
+        Thibitisha taarifa za malipo zinazoonekana.
+      </li>
+
+      <li>
+        Kamilisha malipo.
+      </li>
+
+      <li>
+        Hifadhi SMS au risiti kama uthibitisho wa malipo.
+      </li>
+
+    </ol>
+
+  </div>
+
+</div>
+
+<div class="mt-6">
+    <p class="text-sm mb-2">
+      Ambatanisha risiti au screenshot ya muamala
+    </p>
+
+    <input
+  type="file"
+  (change)="onFileSelected($event)"
+  name="proofOfPayment"
+  accept=".jpg,.jpeg,.png,.gif,.webp,.pdf"
+
+  class="block w-full text-sm border rounded p-2"
+>
+  </div>
+
+   <!-- 💳 PAYMENT INSTRUCTIONS -->
+
+
+  
+
+
+
+
+<!-- 🔹 TERMS -->
   <div class="flex items-center gap-2">
     <input type="checkbox"
        [(ngModel)]="formData.agreed"
@@ -351,15 +488,26 @@
   <div class="bg-blue-100 text-sm p-3 rounded text-gray-800">
     <strong>Note:</strong> You don't need to create an account. Just provide your details and complete the registration. Admins will see your registration in their dashboard.
   </div>
+</div>
+  
+  
 
-  </div>
+
+    
+  
+
+   
+      
+
+  
+
 
  
 
   <!-- ===================== -->
   <!-- CHANGIA SECTION -->
   <!-- ===================== -->
-  <div *ngIf="activeTab === 'changia'">
+  <!-- <div *ngIf="activeTab === 'changia'">
 
     
  
@@ -367,7 +515,6 @@
      class="cursor-pointer p-6 bg-white drop-shadow-md drop-shadow-[#11732e] 
             flex flex-col gap-4 mb-6
              rounded-lg">
-  <!-- 🔹 BASIC INFO -->
        <p class="font-semibold mb-4">Participant details</p>
 
   <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -379,7 +526,6 @@
        placeholder="Jina kamili">
 <div class="flex gap-2">
 
-  <!-- COUNTRY SELECT -->
   <select
     [(ngModel)]="formData.phoneCountry"
     (change)="onPhoneCountryChange(formData.phoneCountry)"
@@ -395,7 +541,6 @@
 
   </select>
 
-  <!-- PHONE INPUT -->
   <input
     type="tel"
     [(ngModel)]="formData.phone"
@@ -428,9 +573,100 @@
        
 
   </div>
+  <div 
+     class="cursor-pointer p-6 bg-white drop-shadow-md drop-shadow-[#11732e] 
+            flex flex-col gap-4 mb-6
+             rounded-lg">
+  <div class=" rounded-lg p-4 shadow-sm">
+
+    <p class="font-semibold mb-4">Event Payment Attachment </p>
+
+  
+
+ 
+<div class="bg-white p-6 rounded-lg shadow-md space-y-4 cursor-pointer p-6 bg-white drop-shadow-md drop-shadow-[#11732e] 
+            flex flex-col gap-4 
+             rounded-lg">
+                <div class="grid grid-cols-2 gap-2 mb-6">
+
+    <button type="button"
+      (click)="activeTabs = 'ControlNumber'"
+      [ngClass]="activeTabs === 'ControlNumber'
+        ? 'bg-green-600 text-white'
+        : 'bg-gray-200'"
+      class="px-4 py-2 rounded">
+      Control Number
+    </button>
+
+   
+
+    <button type="button"
+      (click)="activeTabs = 'MixxbyYas'"
+      [ngClass]="activeTabs === 'MixxbyYas'
+        ? 'bg-green-600 text-white'
+        : 'bg-gray-200'"
+      class="px-4 py-2 rounded">
+      Mixx by Yas
+    </button>
+
+  </div>
+  <div *ngIf="activeTabs === 'ControlNumber'">
+  
+    
+
+ 
+
+  <ol>
+  <li>Fungua huduma ya malipo kwenye benki, M-Pesa, Airtel Money, Mixx by Yas, HaloPesa au app ya benki.</li>
+  <li>Chagua sehemu ya <strong>Lipa Control Number</strong>.</li>
+  <li>Weka TARI Control Number: <strong>996200075789</strong>.</li>
+  <li>Weka kiasi cha usajili unachotaka kulipa.</li>
+  <li>Thibitisha taarifa za malipo zinazoonekana.</li>
+  <li>Kamilisha malipo.</li>
+  <li>Hifadhi SMS au risiti kama uthibitisho wa malipo.</li>
+</ol>
+
+
+  
+
+</div>
+
+ <div *ngIf="activeTabs === 'MixxbyYas'">
+  <ol>
+  <li>Fungua huduma ya malipo kwenye benki, M-Pesa, Airtel Money, Mixx by Yas, HaloPesa au app ya benki.</li>
+  <li>Chagua sehemu ya <strong>Lipa MixxbyYas</strong>.</li>
+    <li>Weka Namba ya Malipo: <strong>223567375</strong>.</li>
+  <li>Jina litatokea<strong>TARI MARATHONI 2026:</strong>.</li>
+  <li>Weka kiasi<strong>45,000</strong></li>
+  <li>Thibitisha taarifa za malipo zinazoonekana.</li>
+  <li>Kamilisha malipo.</li>
+  <li>Hifadhi SMS au risiti kama uthibitisho wa malipo.</li>
+</ol>
+</div>
+<div class="mt-6">
+    <p class="text-sm mb-2">
+      Ambatanisha risiti au screenshot ya muamala
+    </p>
+
+    <input
+  type="file"
+  (change)="onFileSelected($event)"
+  name="proofOfPayment"
+  accept=".jpg,.jpeg,.png,.gif,.webp,.pdf"
+
+  class="block w-full text-sm border rounded p-2"
+>
+  </div>
+
+</div>
+
+
+  </div>
+  
      </div>
 
-  <!-- 🔹 TERMS -->
+   </div>  
+
   <div class="flex items-center gap-2">
     <input type="checkbox"
        [(ngModel)]="formData.agreed"
@@ -444,12 +680,6 @@
     <strong>Note:</strong> You don't need to create an account. Just provide your details and complete the registration. Admins will see your registration in their dashboard.
   </div>
 
-  </div>
-
-  <!-- ===================== -->
-  <!-- SUBMIT -->
-  <!-- ===================== -->
- 
    <div class="flex justify-between mt-6">
 
     
@@ -465,14 +695,17 @@
 </div>
 
     
-  </div>
+  </div> -->
   <div class="flex justify-end mt-6 p-4">
  <button
  type="submit"
  class="mt-4 bg-green-500 text-black px-4 py-2 rounded hover:bg-green-400 transition">
-  Continue
+  Finish
 </button>
 </div>
+
+  
+  
 
 </form>
    

@@ -18,7 +18,7 @@ export class Home {
 
   constructor(private http: HttpClient, private router: Router) {
 
-    const api$ = this.http.get<any[]>('https://41.59.225.78:8443/api/admin/events');
+    const api$ = this.http.get<any[]>('https://events.tari.go.tz/api/admin/events');
 
     this.events$ = api$;
 

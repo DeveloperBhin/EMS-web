@@ -22,9 +22,9 @@
     </a>
 
     <!-- Center -->
-    <a href="/events" class="justify-self-end hover:text-yellow-300 transition ">
+    <!-- <a href="/events" class="justify-self-end hover:text-yellow-300 transition ">
       EVENTS
-    </a>
+    </a> -->
     <!-- Right -->
    <a href="https://maria2438.pixieset.com/uzinduzimarathon/"
       target="_blank"
@@ -55,7 +55,7 @@ UPCOMING EVENTS
     
     <div *ngFor="let event of events$ | async" class="p-4   rounded-lg drop-shadow-black  drop-shadow-md bg-[#11732e] text-white scale-105 rotate-1 hover:drop-shadow-2xl  hover:scale-100 "> 
     <img 
-        [src]="event.featuredImage" 
+        src="/marathon.png" 
         alt="event image"
         class="w-full h-80 object-cover rounded mb-3"
       />
@@ -119,12 +119,12 @@ RECENTLY EVENTS
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 ">
     
     <div *ngFor="let completedevent of completedEvents$ | async" class="p-4   rounded-lg drop-shadow-black  drop-shadow-md bg-[#11732e] text-white scale-105 rotate-1 hover:drop-shadow-2xl  hover:scale-100 ">
-      
       <img 
-        [src]="completedevent.featuredImage" 
-        alt="completedevent image"
-        class="w-full h-80 object-cover rounded mb-3"
-      />
+  src="/marathon.png"
+  alt="completed event image"
+  class="w-full h-80 object-cover rounded mb-3"
+/>
+
   
      <span 
     class="absolute top-5 right-3 bg-yellow-500 
@@ -321,7 +321,7 @@ TESTIMONIALS
 
     <!-- IMAGE -->
     <img 
-      [src]="events.featuredImage" 
+      src="/marathon.png"
       alt="profile image"
       class="w-14 h-14 object-cover rounded-full border-2 border-[#11732e]"
     />
@@ -362,7 +362,7 @@ TESTIMONIALS
 
     <!-- IMAGE -->
     <img 
-      [src]="events.featuredImage" 
+      src="/marathon.png"
       alt="profile image"
       class="w-14 h-14 object-cover rounded-full border-2 border-[#11732e]"
     />

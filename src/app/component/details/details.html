@@ -22,9 +22,9 @@
     </a>
 
     <!-- Center -->
-    <a href="/events" class="justify-self-end hover:text-yellow-300 transition ">
+    <!-- <a href="/events" class="justify-self-end hover:text-yellow-300 transition ">
       EVENTS
-    </a>
+    </a> -->
     <!-- Right -->
    <a href="/gallery"
    class="justify-self-end hover:text-yellow-300 transition ">
@@ -99,8 +99,13 @@
   </div>
 
    <div class="flex justify-end mt-6 p-4">
-    <button
+    <!-- <button
       (click)="goToRegister(event); $event.stopPropagation()"
+      class="mt-4 bg-green-500 text-black px-4 py-2 rounded hover:bg-green-400 transition">
+      Continue
+    </button> -->
+     <button
+       [routerLink]="['/registration']"
       class="mt-4 bg-green-500 text-black px-4 py-2 rounded hover:bg-green-400 transition">
       Continue
     </button>

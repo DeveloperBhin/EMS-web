@@ -41,7 +41,7 @@
     *ngIf="currentMedia.type === 'video'"
     class="w-full h-full object-cover transition-opacity duration-700"
     autoplay
-    muted
+  [muted]="true"
     playsinline
     [loop]="true"
   >
@@ -61,10 +61,10 @@
     <!-- Overlay -->
     <div class="absolute inset-0 flex flex-col items-center bg-black/30 text-center">
       <h1 class="text-2xl → lg:text-5xl md:text-5xl font-bold drop-shadow-lg text-white mt-20">
-        88 MARATHON ORGANISED BY TARI - 2026
+        TARI MARATHON - 2026
       </h1>
       <p class="text-sm sm:text-base md:text-lg lg:text-xl mt-2 drop-shadow-sm text-white">
-        (Utafiti kwa Usalama wa Chakula-Dira 2025)
+        (Utafiti kwa Usalama wa Chakula-Dira 2050)
       </p>
 
       <!-- Centered circular JISAJILI button -->
@@ -309,7 +309,7 @@ bg-cover bg-center">
 <section class="py-10 bg-gray-50">
   <div class="max-w-6xl mx-auto px-2 sm:px-4">
     <h2 class="text-2xl sm:text-3xl font-bold text-[#11732E] text-center mb-6 sm:mb-8">
-{{ 'NAV.PAYMENT' | translate }}
+{{ 'NAV.PAYMENTS' | translate }}
     </h2>
 
     <!-- ONE ROW NO SCROLL -->
@@ -324,7 +324,9 @@ bg-cover bg-center">
       TZS 45,000.00/=
     </p>
 <a  href="/registration" class=" bg-black  p-2 font-bold text-xs sm:text-sm text-green-700 text-center">
-{{ 'NAV.Ticket' | translate }}
+<!-- {{ 'NAV.Ticket' | translate }} -->
+{{ 'NAV.PAYMENT' | translate }}
+
  </a>
   </a>
 
@@ -337,7 +339,7 @@ bg-cover bg-center">
       TZS 45,000.00/=
     </p>
 <a  href="/registration" class=" bg-black  p-2 font-bold text-xs sm:text-sm text-green-700 text-center">
-{{ 'NAV.Ticket' | translate }}
+{{ 'NAV.PAYMENT' | translate }}
  </a>
   </a>
 
@@ -350,7 +352,7 @@ bg-cover bg-center">
       TZS 45,000.00/=
     </p>
  <a  href="/registration" class=" bg-black  p-2 font-bold text-xs sm:text-sm text-green-700 text-center">
-{{ 'NAV.Ticket' | translate }}
+{{ 'NAV.PAYMENT' | translate }}
  </a>
   </a>
 

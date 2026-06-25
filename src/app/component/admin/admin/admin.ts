@@ -22,7 +22,7 @@ export class Admin implements AfterViewInit  {
 
   constructor(private http: HttpClient, private router: Router) {
 
-    const api$ = this.http.get<any[]>('https://41.59.225.78:8443/api/admin/events');
+    const api$ = this.http.get<any[]>('http://41.59.225.78:8088/api/admin/events');
 
     this.events$ = api$;
 

@@ -128,65 +128,65 @@ export class Payment implements OnInit {
     private router: Router
   ) {}
 
-  ngOnInit() {
-    const id = this.route.snapshot.paramMap.get('id');
+  registrationId!: string | null;
 
-    if (!id) {
-      alert('Invalid event ID');
-      this.router.navigate(['/']);
-      return;
-    }
+ ngOnInit() {
+  this.registrationId = this.route.snapshot.paramMap.get('id');
 
-    this.http.get(`${environment.apiUrl}/api/admin/events/${id}`)
-      .subscribe({
-        next: (res) => {
-          this.event = res;
-          console.log('Event loaded:', res);
-        },
-        error: (err) => {
-          console.error('Failed to load event:', err);
-          alert('Could not load event');
-        }
-      });
+  if (!this.registrationId) {
+    alert('Invalid ID');
+    this.router.navigate(['/']);
+    return;
   }
+
+  this.http.get(`${environment.apiUrl}/api/admin/registrations/${this.registrationId}`)
+    .subscribe({
+      next: (res) => {
+        this.event = res;
+        console.log('Loaded:', res);
+      },
+      error: (err) => {
+        console.error(err);
+        alert('Could not load data');
+      }
+    });
+}
 
   onFileSelected(event: any) {
     this.selectedFile = event.target.files[0];
     console.log('Selected file:', this.selectedFile);
   }
 
-  submitRegistration() {
+ submitRegistration() {
 
-    if (!this.selectedFile) {
-      alert('Please upload proof of payment');
-      return;
-    }
-
-    const registrationId = this.route.snapshot.paramMap.get('id');
-
-    if (!registrationId) {
-      alert('Missing registration ID');
-      return;
-    }
-
-    const formData = new FormData();
-    formData.append('file', this.selectedFile);
-
-    this.http.post(
-      `${environment.apiUrl}/api/admin/registrations/complete/${registrationId}`,
-      formData
-    ).subscribe({
-      next: (res: any) => {
-        console.log('Payment completed:', res);
-        alert('Payment uploaded successfully');
-        this.router.navigate(['/']);
-      },
-      error: (err) => {
-        console.error(err);
-        alert('Upload failed');
-      }
-    });
+  if (!this.selectedFile) {
+    alert('Please upload proof of payment');
+    return;
   }
+
+  if (!this.registrationId) {
+    alert('Missing registration ID');
+    return;
+  }
+
+  const formData = new FormData();
+  formData.append('file', this.selectedFile);
+
+  this.http.post(
+    `${environment.apiUrl}/api/admin/registrations/complete/${this.registrationId}`,
+    formData
+  ).subscribe({
+    next: (res: any) => {
+      console.log('Payment completed:', res);
+      alert('Payment uploaded successfully');
+      this.router.navigate(['/']);
+    },
+    error: (err) => {
+      console.error(err);
+      alert('Upload failed');
+    }
+  });
+}
 
   goToDetails(event: any) {
     this.router.navigate(['/details', event.id]);

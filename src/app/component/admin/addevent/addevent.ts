@@ -30,7 +30,7 @@ eventId!: string;
 ngOnInit() {
   this.eventId = this.route.snapshot.paramMap.get('id')!;
 
-  this.http.get(`http://localhost:8080/api/admin/events/${this.eventId}`)
+  this.http.get(`http://localhost:8088/api/admin/events/${this.eventId}`)
     .subscribe(res => {
       this.event = res;
             console.log("Event loaded:", res);
@@ -134,7 +134,7 @@ submitForm() {
   };
 
 
-this.http.post(`http://localhost:8080/api/admin/registrations?eventId=${this.eventId}`, payload)    .subscribe({
+this.http.post(`http://localhost:8088/api/admin/registrations?eventId=${this.eventId}`, payload)    .subscribe({
       next: (res: any) => {
         console.log("Registration successful:", res);
         this.router.navigate(['/payment', res.id]);

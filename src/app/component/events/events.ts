@@ -26,7 +26,7 @@ completedevents: any[] = [];
 
   }
   getUpcomingEvents() {
-    this.http.get<any[]>('http://localhost:8080/api/admin/events/upcoming')
+    this.http.get<any[]>('https://events.tari.go.tz/api/admin/events/upcoming')
       .subscribe({
         next: (res) => {
                   console.log("Response:", res); // ✅ VERY IMPORTANT
@@ -41,7 +41,7 @@ completedevents: any[] = [];
 
  
   getCompletedEvents() {
-    this.http.get<any[]>('http://localhost:8080/api/admin/events/completed')
+    this.http.get<any[]>('https://events.tari.go.tz/api/admin/events/completed')
       .subscribe({
         next: (res) => {
                   console.log("Response:", res); 

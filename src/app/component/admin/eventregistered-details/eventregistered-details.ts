@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { Sidebar } from '../../../layout/sidebar/sidebar';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { Observable, map } from 'rxjs';
 
@@ -14,25 +13,23 @@ import { Observable, map } from 'rxjs';
 })
 export class EventregisteredDetails {
 
+  eventId = '1';
 
-
-events$: Observable<any[]>;
+  events$: Observable<any[]>;
   completedEvents$: Observable<any[]>;
 
-  constructor(private http: HttpClient, private router: Router) {
+  constructor(private http: HttpClient) {
 
-    const api$ = this.http.get<any[]>('https://41.59.225.78:8443/api/admin/events');
+    this.events$ = this.http.get<any[]>(
+      `https://events.tari.go.tz/api/admin/registrations?eventId=${this.eventId}`
+    );
 
-    this.events$ = api$;
-
-    // Example split (adjust logic if needed)
-    this.completedEvents$ = api$.pipe(
-      map(events => events.filter(e => new Date(e.endDate) < new Date()))
+    this.completedEvents$ = this.events$.pipe(
+      map(events =>
+        events.filter(
+          e => new Date(e.endDate) < new Date()
+        )
+      )
     );
   }
-
 }
-
-
-
-
