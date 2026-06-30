@@ -29,8 +29,116 @@
 "PAYMENTS":"CHAGUA TIKETI",
 "ADA ZA USHIRIKI":"ADA ZA USHIRIKI",
 "wadhamini":"WADHAMINI",
-"PAYMENT":"NUNUA TIKETI"
-          
+"PAYMENT":"NUNUA TIKETI",
+
+    "TERMS": "MASHARTI NA VIGEZO VYA TARI MARATHONI 2026",
+
+"INTRO": "UTANGULIZI",
+"DEFINITIONS": "TAFSIRI NA UFAFANUZI",
+"REGISTRATION": "USAJILI NA MATAMKO YA WASHIRIKI",
+"CANCELLATION": "KUFUTWA, KUAHIRISHWA NA MABADILIKO YA TUKIO",
+"LIABILITY": "DHIMA, UKUBALI WA HATARI NA FIDIA",
+
+"PURPOSE": "Madhumuni ya Masharti na Vigezo",
+"ACCEPTANCE": "Kukubali Masharti",
+"APPLICABILITY": "Utekelezaji",
+"EVENT_CATEGORIES": "Aina za Mashindano",
+"REGISTRATION_INFORMATION": "Taarifa za Usajili",
+"ACCEPTANCE_REGISTRATION": "Kukubali Wakati wa Usajili",
+"PARTICIPANT_ELIGIBILITY": "Sifa za Kushiriki",
+
+"DEFINITIONS_TITLE": "Tafsiri",
+"INTERPRETATION": "Ufafanuzi",
+"REFERENCES_TO_LAWS": "Marejeo ya Sheria",
+"OBLIGATIONS": "Wajibu",
+"REFERENCES_TO_CLAUSES": "Marejeo ya Vifungu",
+"ILLUSTRATIVE_EXPRESSIONS": "Misemo ya Mifano",
+"ORDER_OF_PRECEDENCE": "Mpangilio wa Kipaumbele",
+
+"ACCURACY_INFORMATION": "Usahihi wa Taarifa",
+"PAYMENTs": "Malipo",
+"PARTICIPATION": "Ushiriki",
+"COMPLIANCE": "Uzingatiaji",
+"NATURE_EVENT": "Asili ya Tukio",
+"PHYSICAL_FITNESS": "Uwezo wa Kimwili",
+"HEALTH_RESPONSIBILITY": "Wajibu wa Afya",
+"RECREATIONAL_PARTICIPATION": "Ushiriki wa Burudani",
+
+"CANCELLATION_TITLE": "Kufutwa",
+"FORCE_MAJEURE": "Nguvu ya Dharura",
+"NOTIFICATION": "Taarifa",
+"REFUND_POLICY": "Sera ya Marejesho",
+
+"INDEMNITY": "Fidia",
+"UNDERSTANDING": "Uelewa",
+"RISKS": "Hatari",
+"RISK_EXAMPLES": "Mifano ya Hatari",
+"WITHDRAWAL": "Kujiondoa",
+"OWN_RISK": "Hatari ya Mshiriki Mwenyewe",
+
+"1.1": "Masharti na Vigezo hivi yanasimamia usajili na ushiriki wa watu wote katika TARI Marathoni (\"Tukio\"). Yanaweka haki, majukumu na wajibu wa washiriki pamoja na Taasisi ya Utafiti wa Kilimo Tanzania (TARI) kama mratibu wa tukio. Kwa kujisajili au kushiriki katika Tukio hili, mtu anakubali na kuafiki kuzingatia Masharti na Vigezo hivi.",
+
+"1.2": "Mtu yeyote anayejisajili au kushiriki katika Tukio atachukuliwa kuwa amesoma, ameelewa na amekubali kuzingatia Masharti na Vigezo hivi pamoja na sheria, kanuni na masharti yote yanayotumika katika Tukio.",
+
+"1.3": "Masharti haya yanatumika kwa washiriki wote, wajitolea, maafisa na watu wengine wanaoshiriki katika Tukio kwa namna yoyote ile.",
+
+"1.4": "Masharti na Vigezo hivi yanajumuisha Mbio za Nusu Marathoni (Kilomita 21), Mbio za Kilomita 10, Mbio za Burudani za Kilomita 5 na aina nyingine za mashindano zitakazoanzishwa na Mratibu.",
+
+"1.5": "Taarifa rasmi kuhusu taratibu za usajili, ratiba za mashindano, masharti ya kushiriki, ada na taarifa za maboresho ya Tukio zitatolewa kupitia njia rasmi za mawasiliano za TARI.",
+
+"1.6": "Kwa kuwasilisha usajili, mshiriki anathibitisha kuwa amesoma kwa makini, ameelewa na amekubali kuzingatia Masharti na Vigezo hivi pamoja na sheria, kanuni na masharti yote yanayotumika katika Tukio.",
+
+"1.7": "Washiriki wanatangaza kuwa wana afya na uwezo wa kimwili unaowaruhusu kushiriki katika Tukio na, inapohitajika, wanastahili kushindana kwa mujibu wa kanuni za Athletics na World Athletics.",
+
+"2.1": "Kwa madhumuni ya Masharti na Vigezo hivi, maneno na misemo kama vile “Tukio”, “Mshiriki”, “Mratibu”, “Ada ya Usajili”, “Maafisa”, “Nguvu ya Dharura” na “Sheria Zinazotumika” yatakuwa na maana zilizopewa katika waraka huu.",
+
+"2.2": "Isipokuwa muktadha utahitaji vinginevyo, maneno katika umoja yatahusisha wingi na maneno katika wingi yatahusisha umoja.",
+
+"2.3": "Marejeo yoyote ya sheria yatahusisha marekebisho yote, sheria ndogo, kanuni na nyaraka za kisheria zilizotungwa chini ya sheria hizo.",
+
+"2.4": "Wajibu wa kutofanya jambo fulani unajumuisha wajibu wa kutoruhusu au kutomsaidia mtu mwingine kufanya jambo hilo.",
+
+"2.5": "Marejeo yanahusu vifungu vilivyomo katika Masharti na Vigezo hivi.",
+
+"2.6": "Maneno kama vile “ikiwa ni pamoja na”, “kwa mfano” na “hasa” yanakusudiwa kuwa mifano tu na hayatapunguza maana ya masharti yaliyotangulia.",
+
+"2.7": "Iwapo kutakuwa na mgongano wowote kati ya Masharti na Vigezo hivi na Kanuni zozote za Tukio, Masharti na Vigezo hivi yatapewa kipaumbele isipokuwa pale itakapobainishwa vinginevyo.",
+
+"3.1": "Washiriki wanathibitisha kuwa taarifa zote walizowasilisha wakati wa usajili ni za kweli, kamili na sahihi. Kutoa taarifa za uongo au za kupotosha kunaweza kusababisha kufutiwa ushiriki na usajili.",
+
+"3.2": "Washiriki watalipa ada husika ya usajili kabla ya tarehe ya mwisho ya usajili isipokuwa kama wameondolewa wajibu huo na Mratibu au mdhamini aliyeidhinishwa.",
+
+"3.3": "Washiriki wanakubali kushiriki katika Tukio katika tarehe iliyopangwa na wanatambua kuwa usajili ni wa mtu binafsi na hauwezi kuhamishwa kwa mtu mwingine.",
+
+"3.4": "Washiriki wanakubali kuzingatia Masharti na Vigezo hivi, Kanuni za Tukio, maelekezo yatakayotolewa na Maafisa wa Tukio pamoja na sheria zote zinazotumika.",
+
+"3.5": "Washiriki wanatambua kuwa mbio za marathoni ni shughuli ya uvumilivu inayohitaji nguvu kubwa za mwili na ina hatari za asili.",
+
+"3.6": "Washiriki wanathibitisha kuwa wana kiwango kinachohitajika cha afya na uwezo wa kimwili na wamepata ushauri wa kitabibu inapohitajika kabla ya kushiriki.",
+
+"3.7": "Washiriki wanawajibika wenyewe kufuatilia hali zao za kiafya na kimwili kabla, wakati na baada ya Tukio.",
+
+"3.8": "Isipokuwa pale itakapobainishwa vinginevyo, ushiriki ni kwa madhumuni ya burudani, michezo, misaada au matangazo na si kwa shughuli yoyote ya kibiashara isiyoidhinishwa.",
+
+"4.1": "TARI inahifadhi haki ya kufuta, kuahirisha, kufupisha au kufanya mabadiliko katika Tukio ikiwa mazingira yatahitaji hivyo kwa ajili ya kulinda washiriki, maafisa, wajitolea au umma.",
+
+"4.2": "Mratibu hatawajibika kwa kufutwa au kuahirishwa kwa Tukio kunakosababishwa na mazingira yaliyo nje ya uwezo wake wa kudhibiti, ikiwa ni pamoja na majanga ya asili, dharura za afya ya umma, machafuko ya kiraia, vitisho vya kiusalama au maelekezo ya serikali.",
+
+"4.3": "Pale inapowezekana kwa kiasi kinachofaa, washiriki watajulishwa kuhusu kufutwa, kuahirishwa au mabadiliko makubwa kupitia njia rasmi za mawasiliano.",
+
+"4.4": "Ada za usajili kwa kawaida hazitarejeshwa isipokuwa pale ambapo Mratibu ataamua wazi vinginevyo.",
+
+"5.1": "Washiriki kwa hiari yao wanaachilia na kuifidia TARI, wafanyakazi wake, wadhamini, wajitolea, washirika, wakandarasi na maafisa wake dhidi ya madai ya dhima yanayotokana na ushiriki katika Tukio kwa kiwango cha juu kinachoruhusiwa kisheria.",
+
+"5.2": "Washiriki wanakiri kuwa wanaelewa athari za kisheria za tamko hili la kuachilia dhima na wanalikubali kwa hiari yao.",
+
+"5.3": "Washiriki wanatambua kuwa matukio ya marathoni yanahusisha hatari ikiwemo majeraha, maradhi, upungufu wa maji mwilini, ajali, ulemavu wa kudumu au kifo.",
+
+"5.4": "Hatari zinaweza kusababishwa na hali ya hewa, ubora wa barabara, msongamano wa magari, mazingira ya njia, hali ya afya ya mshiriki, hitilafu za vifaa, vitendo vya washiriki wengine au mazingira yasiyotarajiwa.",
+
+"5.5": "Washiriki wanakubali kujiondoa mara moja ikiwa wataelekezwa kufanya hivyo na Maafisa wa Tukio au wataalamu wa afya, au ikiwa wanaamini kuwa kuendelea kushiriki kutakuwa si salama.",
+
+"5.6": "Ushiriki katika Tukio ni wa hiari kabisa na ni kwa hatari ya mshiriki mwenyewe."
   },
   "CTA": "Jisajili Sasa"
 }

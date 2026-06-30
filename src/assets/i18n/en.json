@@ -29,7 +29,92 @@
 "PAYMENTS":"CHOOSE A TICKET",
 "ADA ZA USHIRIKI":"PARTICIPATION FEES",
 "wadhamini":"SPONSORS",
-"PAYMENT":"BUY TICKETS"
+"PAYMENT":"BUY TICKETS",
+
+    "TERMS": "TARI MARATHON 2026 TERMS AND CONDITIONS",
+
+    "INTRO": "INTRODUCTION",
+    "DEFINITIONS": "DEFINITIONS AND INTERPRETATION",
+    "REGISTRATION": "REGISTRATION AND PARTICIPANT DECLARATIONS",
+    "CANCELLATION": "EVENT CANCELLATION, POSTPONEMENT AND CHANGES",
+    "LIABILITY": "LIABILITY, ASSUMPTION OF RISK AND INDEMNITY",
+
+    "PURPOSE": "Purpose of the Terms and Conditions",
+    "ACCEPTANCE": "Acceptance of the Terms",
+    "APPLICABILITY": "Applicability",
+    "EVENT_CATEGORIES": "Event Categories",
+    "REGISTRATION_INFORMATION": "Registration Information",
+    "ACCEPTANCE_REGISTRATION": "Acceptance Upon Registration",
+    "PARTICIPANT_ELIGIBILITY": "Participant Eligibility",
+
+    
+    "DEFINITIONS_TITLE": "Definitions",
+    "INTERPRETATION": "Interpretation",
+    "REFERENCES_TO_LAWS": "References to Laws",
+    "OBLIGATIONS": "Obligations",
+    "REFERENCES_TO_CLAUSES": "References to Clauses",
+    "ILLUSTRATIVE_EXPRESSIONS": "Illustrative Expressions",
+    "ORDER_OF_PRECEDENCE": "Order of Precedence",
+
+    "ACCURACY_INFORMATION": "Accuracy of Information",
+    "PAYMENTs": "Payment",
+    "PARTICIPATION": "Participation",
+    "COMPLIANCE": "Compliance",
+    "NATURE_EVENT": "Nature of the Event",
+    "PHYSICAL_FITNESS": "Physical Fitness",
+    "HEALTH_RESPONSIBILITY": "Health Responsibility",
+    "RECREATIONAL_PARTICIPATION": "Recreational Participation",
+
+    "CANCELLATION_TITLE": "Cancellation",
+    "FORCE_MAJEURE": "Force Majeure",
+    "NOTIFICATION": "Notification",
+    "REFUND_POLICY": "Refund Policy",
+
+    "INDEMNITY": "Indemnity",
+    "UNDERSTANDING": "Understanding",
+    "RISKS": "Risks",
+    "RISK_EXAMPLES": "Risk Examples",
+    "WITHDRAWAL": "Withdrawal",
+    "OWN_RISK": "Own Risk",
+
+    "1.1": "These Terms and Conditions govern the registration and participation of all individuals in the TARI Marathon (\"the Event\").They establish the rights, responsibilities, and obligations of participants and the Tanzania Agricultural Research Institute (TARI) as the event organizer. By registering for or participating in the Event, individuals acknowledge and agree to abide by these Terms and Conditions.",
+    "1.2": "Any person who registers for or participates  in the Event shall be deemed to have read,understood and accepted  to comply withthese Terms and Conditions,together with all applicable laws,regulations, and Event rules.",
+    "1.3": "These Terms apply to all participants, volunteers, officials and other person taking part in the Event in any capacity.",
+    "1.4": "The Terms and condition Including  Half Marathon (21km), 10km Run, 5km Fun Run, and other race categories introduced by the Organizer.",
+    "1.5": "Official Information regarding registration procedures, race schedukes, entry requirements,fees, and event updates shall be communicated through official TARI Official communication channels.",
+    "1.6": "By submitting registration,the paricipants  confirms that they have carefully read,understood and accepted  to comply with these Terms and Conditions,together with all applicable laws,regulations, and Event rules.",
+    "1.7": "Participants declare that they are physically fit, edically capable of participating in the Event and where applicable,eligible to compete under he rules of Athletics and World Athletics .",
+   
+   
+    "2.1": "For the purposes of these Terms and Conditions, words and expressions such as “Event,” “Participant,” “Organizer,” “Entry Fee,” “Officials,” “Force Majeure,” and “Applicable Laws” shall have the meanings assigned to them in this document.",
+    "2.2": "Unless the context otherwise requires, words in the singular include the plural and vice versa.",
+    "2.3": "Any reference to legislation includes all amendments, subsidiary legislation, regulations, and statutory instruments issued under such legislation.",
+    "2.4": "An obligation not to perform an act includes an obligation not to permit or assist another person to perform that act.",
+    "2.5": "References refer to clauses contained within the TErms and Condition.",
+    "2.6": "Words such as “including,” “for example,” and “in particular” are intended to be illustrative and shall not limit the meaning of the preceding provisions.",
+    "2.7": "In the event of any inconsistency between these Terms and Conditions and any Event Rules, these Terms and Conditions shall prevail unless otherwise stated.",
+   
+    "3.1": "Participants warrant that all information submitted during registration is true, complete, and accurate. Providing false or misleading information may result in disqualification and cancellation of registration.",
+    "3.2": "Participants shall pay the applicable registration fee before the registration deadline unless exempted by the Organizer or an authorized sponsor.",
+    "3.3": "Participants agree to take part in the Event on the scheduled date and acknowledge that registration is personal and non-transferable.",
+    "3.4": "Participants agree to comply with these Terms and Conditions, Event Rules, instructions issued by Event Officials, and all applicable laws.",
+    "3.5": "Participants acknowledge that marathon running is a physically demanding endurance activity that carries inherent risks.",
+    "3.6": "Participants confirm that they possess the necessary level of physical fitness and have taken appropriate medical advice where necessary before participating.",
+    "3.7": "Participants are solely responsible for monitoring their own physical and medical condition before, during, and after the Event.",
+    "3.8": "Unless otherwise specified, participation is for recreational, sporting, charitable, or promotional purposes and not for any unauthorized commercial activity.",
+
+    "4.1": "TARI reserves the right to cancel, postpone, shorten, or modify the Event if circumstances make it necessary to protect participants, officials, volunteers, or the public.",
+    "4.2": "The Organizer shall not be liable for cancellation or postponement caused by circumstances beyond its reasonable control, including natural disasters, public health emergencies, civil unrest, security threats, or government directives.",
+    "4.3": "Where reasonably practicable, participants shall be notified of any cancellation, postponement, or significant changes through official communication channels.",
+    "4.4": "Registration fees shall generally be non-refundable unless the Organizer expressly determines otherwise.",
+
+    "5.1": "Participants voluntarily release and indemnify TARI, its employees, sponsors, volunteers, partners, contractors, and officials from liability arising from participation in the Event to the fullest extent permitted by law.",
+    "5.2": "Participants acknowledge that they understand the legal implications of this waiver and accept it voluntarily.",
+    "5.3": "Participants acknowledge that marathon events involve risks including injury, illness, dehydration, accidents, permanent disability, or death.",
+    "5.4": "Risks may arise from weather conditions, road surfaces, traffic, terrain, personal fitness, equipment failure, actions of other participants, or unforeseen circumstances.",
+    "5.5": "Participants agree to withdraw immediately if instructed by Event Officials or medical personnel, or if they believe continuing participation would be unsafe.",
+    "5.6": "Participation in the Event is entirely voluntary and at the participant’s own risk."
+  
   },
   "CTA": "Register Now"
 }

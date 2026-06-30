@@ -160,3 +160,9 @@
 /* * {
   outline: 1px solid red;
 } */
+
+.partner-logo {
+    width: 144px;
+    height: 80px;
+    object-fit: contain;
+}

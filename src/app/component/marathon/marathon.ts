@@ -33,8 +33,8 @@ export class Marathon implements OnInit, AfterViewInit, OnDestroy {
   countdownInterval: any;
 
   media: MediaItem[] = [
-     { type: 'image', src: '/0V5A3525.jpg' },
-    { type: 'image', src: '/0V5A3539.jpg' },
+     { type: 'image', src: '/0V5A3525.webp' },
+    { type: 'image', src: '/0V5A3539.webp' },
     { type: 'video', src: '/run.mp4' },
    
   ];
@@ -49,7 +49,8 @@ export class Marathon implements OnInit, AfterViewInit, OnDestroy {
     private router: Router,
     private cdr: ChangeDetectorRef,
     private translate: TranslateService
-  ) { const lang = localStorage.getItem('lang') || 'sw';
+  ) { 
+    const lang = localStorage.getItem('lang') || 'sw';
 
   this.currentLang = lang;
   this.translate.setFallbackLang('sw');

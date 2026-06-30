@@ -33,11 +33,17 @@ export const routes: Routes = [
       import('./modules/main-layout/main-layout')
         .then(m => m.MainLayout),
     children: [
+      // {
+      //   path: '',
+      //   loadComponent: () =>
+      //     import('./component/home/home')
+      //       .then(m => m.Home)
+      // },
       {
         path: '',
         loadComponent: () =>
-          import('./component/home/home')
-            .then(m => m.Home)
+          import('./component/marathon/marathon')
+            .then(m => m.Marathon)
       },
       {
         path: 'registration',
@@ -70,7 +76,7 @@ export const routes: Routes = [
             .then(m => m.Gallery)
       },
       {
-        path: 'admin',
+        path: 'T@r1@dmin',
         loadComponent: () =>
           import('./component/admin/admin/admin')
             .then(m => m.Admin)

@@ -213,8 +213,12 @@ event: any = null;
   events$!: Observable<any>;
   eventId!: string;
 
+  uploading = false;
+
+uploadedFile: any = null;
+
   activeTab: 'jisajili' | 'changia' = 'jisajili';
-  activeTabs: 'ControlNumber' | 'MixxbyYas' = 'ControlNumber';
+  activeTabs: 'MixxbyYas' | 'ControlNumber' = 'MixxbyYas';
 
 
   countries: any[] = [];
@@ -240,6 +244,11 @@ event: any = null;
     }
   }
 
+  clearFellow() {
+  this.formData.fellowName = '';
+  this.formData.fellowPhone = '';
+}
+
   formData: any = {
     name: '',
     phone: '',
@@ -256,7 +265,10 @@ event: any = null;
     tshirtSize: '',
     pickupLocation: '',
     raceType: '',
-    Groupname: '',
+    groupName: '',
+    fellow: false,
+    fellowName: '',
+    fellowPhone: '',
 
     idType: '',
     numberOfID: '',
@@ -270,7 +282,7 @@ event: any = null;
   this.eventId = '1';
 
 this.events$ = this.http.get(
-  `https://events.tari.go.tz/api/admin/events/${this.eventId}`
+  `https://events.tari.go.tz/api/admin/events/1`
 );
 
     this.countries = Country.getAllCountries();
@@ -374,47 +386,52 @@ this.events$ = this.http.get(
     return;
   }
 
-  const payload = {
+  if (!this.formData.fellow) {
+  this.formData.fellowName = '';
+  this.formData.fellowPhone = '';
+}
 
+  const payload = {
+    eventId: 1,
     fullname: this.formData.name,
 
-    phone:
-      this.formData.fullPhone ||
-      this.formData.phone,
+  phone: this.formData.fullPhone || this.formData.phone,
+  email: this.formData.email,
 
-    email: this.formData.email,
+  yearOfBirth: this.formData.yearOfBirth,
+  country: this.formData.country,
+  region: this.formData.region,
+  gender: this.formData.Gender,
 
-    yearOfBirth: this.formData.yearOfBirth,
-    country: this.formData.country,
-    region: this.formData.region,
-    gender: this.formData.Gender,
+  shirtSize: this.formData.tshirtSize,
+  raceType: this.formData.raceType,
+  pickupLocation: this.formData.pickupLocation,
+  groupName: this.formData.groupName,
 
-    shirtSize: this.formData.tshirtSize,
-    raceType: this.formData.raceType,
-    pickupLocation: this.formData.pickupLocation,
-    groupName: this.formData.Groupname,
+  idType: this.formData.idType,
+  idNumber: this.formData.numberOfID,
 
-    idType: this.formData.idType,
-    idNumber: this.formData.numberOfID,
+  fellow: this.formData.fellow,
+  fellowName: this.formData.fellowName,
+  fellowPhone: this.formData.fellowPhone,
 
-    proofOfPayment:
-      this.formData.proofOfPayment,
+  proofOfPayment: this.formData.proofOfPayment,
 
-    donationAmount:
-      this.activeTab === 'changia'
-        ? this.amount
-        : null,
+  donationAmount:
+    this.activeTab === 'changia'
+      ? this.amount
+      : null,
 
-    registrationType:
-      this.activeTab === 'changia'
-        ? 'DONATION'
-        : 'REGISTRATION',
+  registrationType:
+    this.activeTab === 'changia'
+      ? 'DONATION'
+      : 'REGISTRATION',
 
-    status: 'PENDING'
-  };
+  status: 'PENDING'
+};
 
   this.http.post(
-    `https://events.tari.go.tz/api/admin/registrations?eventId=${this.eventId}`,
+    `https://events.tari.go.tz/api/admin/registrations?eventId=1`,
     payload
   ).subscribe({
     next: (res: any) => {
@@ -437,10 +454,7 @@ this.events$ = this.http.get(
 onFileSelected(event: any): void {
 
   const file = event.target.files[0];
-
-  if (!file) {
-    return;
-  }
+  if (!file) return;
 
   const allowedTypes = [
     'image/jpeg',
@@ -451,7 +465,7 @@ onFileSelected(event: any): void {
   ];
 
   if (!allowedTypes.includes(file.type)) {
-    alert('Please upload an image or PDF file only.');
+    alert('Please upload image or PDF only');
     event.target.value = '';
     return;
   }
@@ -459,21 +473,32 @@ onFileSelected(event: any): void {
   const uploadData = new FormData();
   uploadData.append('file', file);
 
+  this.uploading = true;
+
   this.http.post(
-    'https://events.tari.go.tz/api/admin/registrations/upload',
-    uploadData,
-    { responseType: 'text' }
-  ).subscribe({
-    next: (url) => {
+  'https://events.tari.go.tz/api/admin/registrations/upload',
+  uploadData,
+  { responseType: 'text' }
+).subscribe({
+    next: (url: any) => {
 
-      console.log('Uploaded URL:', url);
+      this.uploading = false;
 
-      this.formData.proofOfPayment = url;
+      this.formData.proofOfPayment = url;   // ONLY STORE URL (correct)
 
-      alert('Proof of payment uploaded successfully,click Finish button');
+      this.uploadedFile = {
+        url: url,
+        name: file.name,
+        type: file.type
+      };
+
+      event.target.value = '';
+
+      alert('File uploaded successfully,Accept Terms and condition then Click Finish ');
     },
 
     error: (err) => {
+      this.uploading = false;
       console.error(err);
       alert('Upload failed');
     }
